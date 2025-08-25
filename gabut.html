@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/icon.png" type="image/png">
+        <title>Proyek Gabutku</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+            /* Tema Default (Biru gelap) */
+            :root {
+                --primary-color: #2196f3;
+                --secondary-color: #bdbdbd;
+                --background-color: #121212;
+                --text-color: #e0e0e0;
+                --glow-color: #2196f3;
+            }
+
+            body {
+                font-family: "Poppins", sans-serif;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                transition:
+                    background-color 0.5s,
+                    color 0.5s;
+                padding: 20px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* Perbaikan: Hapus overflow: hidden; */
+            }
+
+            .background-light-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -2;
+                pointer-events: none;
+                overflow: hidden;
+            }
+
+            .light-streak {
+                position: absolute;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 0 10px 5px var(--glow-color);
+                opacity: 0;
+                animation: light-fall linear infinite;
+            }
+
+            @keyframes light-fall {
+                0% {
+                    transform: translateX(var(--x)) translateY(var(--y))
+                        scale(1);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                80% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateX(calc(var(--x) + 120vw))
+                        translateY(calc(var(--y) + 120vh)) scale(0.5);
+                    opacity: 0;
+                }
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+            }
+
+            .project-card {
+                background-color: #1e1e1e;
+                border-radius: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                transform-style: preserve-3d;
+                perspective: 1000px;
+                text-decoration: none;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px) rotateX(3deg) scale(1.01);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .project-card:active {
+                transform: scale(0.98);
+            }
+
+            .project-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    45deg,
+                    var(--primary-color) 0%,
+                    transparent 50%
+                );
+                opacity: 0.1;
+                transition: opacity 0.3s;
+                z-index: 1;
+            }
+
+            .project-card:hover::before {
+                opacity: 0.2;
+            }
+
+            .project-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-bottom: 2px solid var(--primary-color);
+                transition:
+                    border-color 0.5s,
+                    transform 0.3s;
+                z-index: 2;
+            }
+
+            .project-card:hover img {
+                transform: scale(1.02);
+            }
+
+            .project-card h3 {
+                padding: 20px;
+                margin: 0;
+                font-size: 1.5em;
+                color: var(--primary-color);
+                transition: color 0.5s;
+                z-index: 2;
+                position: relative;
+            }
+
+            .theme-switcher {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            .theme-button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                background-color: var(--primary-color);
+                color: #fff;
+                font-size: 1.2em;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transition:
+                    transform 0.3s,
+                    background-color 0.5s;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .theme-button:hover {
+                transform: scale(1.1);
+            }
+
+            .theme-button::before {
+                content: "🎨";
+                position: absolute;
+                font-size: 1.5em;
+                animation: spin-and-stop 1.5s cubic-bezier(0.2, 0.8, 0.5, 1)
+                    forwards;
+            }
+
+            @keyframes spin-and-stop {
+                0% {
+                    transform: rotate(0deg);
+                }
+                80% {
+                    transform: rotate(720deg);
+                }
+                100% {
+                    transform: rotate(720deg);
+                }
+            }
+
+            .aesthetic-glow {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(
+                    circle at 80% 20%,
+                    var(--glow-color) 0%,
+                    transparent 60%
+                );
+                opacity: 0.15;
+                pointer-events: none;
+                animation: glow-move 10s infinite alternate;
+                z-index: -1;
+            }
+
+            @keyframes glow-move {
+                0% {
+                    transform: scale(1) translate(0, 0);
+                }
+                100% {
+                    transform: scale(1.2) translate(-20%, 20%);
+                }
+            }
+
+            /* Themes */
+            body.dark-theme {
+                --primary-color: #9c27b0;
+                --secondary-color: #bdbdbd;
+                --background-color: #1a1a2e;
+                --text-color: #e0e0e0;
+                --glow-color: #9c27b0;
+            }
+
+            body.dark-theme .project-card {
+                background-color: #2a2a44;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            body.soft-theme {
+                --primary-color: #e91e63;
+                --secondary-color: #d3d3d3;
+                --background-color: #2c2c2c;
+                --text-color: #e0e0e0;
+                --glow-color: #e91e63;
+            }
+
+            body.soft-theme .project-card {
+                background-color: #3d3d3d;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background-light-container"></div>
+        <div class="aesthetic-glow"></div>
+
+        <div class="theme-switcher">
+            <button class="theme-button" onclick="toggleTheme()"></button>
+        </div>
+
+        <!-- Proyek 1 -->
+        <div class="container">
+            <a href="./gabut/ai-cerdas/index.html" class="project-card">
+                <img src="./gabut/img/ai-cerdas.png" alt="Gambar Proyek 1" />
+                <h3>ai yang malas</h3>
+            </a>
+
+        <!-- Proyek 2 -->
+            <a href="./gabut/ayam-malu/index.html" class="project-card">
+                <img src="./gabut/img/ayam-malu.png" alt="Gambar Ayam-malu" />
+                <h3>ayam malu</h3>
+            </a>
+
+        <!-- Proyek 3 -->
+            <a href="./gabut/balok-elastis/index.html" class="project-card">
+                <img src="./gabut/img/balok-elastis.png" alt="Gambar Balok elastis" />
+                <h3>balok elastis</h3>
+            </a>
+
+        <!-- Proyek 4 -->
+            <a href="./gabut/burung-siang-dan-malam/index.html" class="project-card">
+                <img src="./gabut/img/burung-siang-dan-malam.png" alt="Gambar Burung pagi dan malam" />
+                <h3>burung siang dan malam</h3>
+            </a>
+
+        <!-- Proyek 5 -->
+            <a href="./gabut/chat-whatsapp/index.html" class="project-card">
+                <img src="./gabut/img/chat-whatsapp.png" alt="Gambar chat whatsapp" />
+                <h3>chat whatsapp</h3>
+            </a>
+
+        <!-- Proyek 6 -->
+            <a href="./gabut/foto-text/index.html" class="project-card">
+                <img src="./gabut/img/foto-text.png" alt="Gambar foto to text" />
+                <h3>photo to text</h3>
+            </a>
+
+        <!-- Proyek 7 -->
+            <a href="./gabut/halloween/index.html" class="project-card">
+                <img src="./gabut/img/halloween.png" alt="Gambar halloween" />
+                <h3>halloween</h3>
+            </a>
+
+        <!-- Proyek 8 -->
+            <a href="./gabut/hujan-kapal-kertas/index.html" class="project-card">
+                <img src="./gabut/img/hujan-kapal-kertas.png" alt="Gambar kapal kertas" />
+                <h3>kapal kertas</h3>
+            </a>
+
+        <!-- Proyek 9 -->
+            <a href="./gabut/ikan-berenang/index.html" class="project-card">
+                <img src="./gabut/img/ikan-berenang.png" alt="Gambar ikan berenang" />
+                <h3>ikan berenang</h3>
+            </a>
+
+        <!-- Proyek 10 -->
+            <a href="./gabut/jam-alarm/index.html" class="project-card">
+                <img src="./gabut/img/jam-alarm.png" alt="Gambar Proyek 10" />
+                <h3>alarm</h3>
+            </a>
+            
+            <!-- Proyek 11 -->
+            <a href="./gabut/kalkulator/index.html" class="project-card">
+                <img src="./gabut/img/kalkulator.png" alt="Gambar kalkulator" />
+                <h3>kalkulator</h3>
+            </a>
+            
+            <!-- Proyek 12 -->
+            <a href="./gabut/kapur/index.html" class="project-card">
+                <img src="./gabut/img/kapur.png" alt="Gambar kapur" />
+                <h3>kapur</h3>
+            </a>
+            
+            <!-- Proyek 13 -->
+            <a href="./gabut/kelinci-berseluncur/index.html" class="project-card">
+                <img src="./gabut/img/kelinci-berseluncur.png" alt="Gambar kelinci berseluncur" />
+                <h3>kelinci seluncur</h3>
+            </a>
+            
+            <!-- Proyek 14 -->
+            <a href="./gabut/kelinci-terbang/index.html" class="project-card">
+                <img src="./gabut/img/kelinci-terbang.png" alt="Gambar kelinci terbang" />
+                <h3>kelinci terbang</h3>
+            </a>
+            
+            <!-- Proyek 15 -->
+            <a href="./gabut/kucing-bermain/index.html" class="project-card">
+                <img src="./gabut/img/kucing-bermain.png" alt="Gambar kucing bermain" />
+                <h3>kucing bermain</h3>
+            </a>
+            
+            <!-- Proyek 16 -->
+            <a href="./gabut/kucing-pengawas/index.html" class="project-card">
+                <img src="./gabut/img/kucing-pengawas.png" alt="Gambar kucing pengawas" />
+                <h3>kucing pengawas</h3>
+            </a>
+            
+            <!-- Proyek 17 -->
+            <a href="./gabut/lampu/index.html" class="project-card">
+                <img src="./gabut/img/lampu.png" alt="Gambar lampu" />
+                <h3>lampu sakelar</h3>
+            </a>
+            
+            <!-- Proyek 18 -->
+            <a href="./gabut/membuat-pohon/index.html" class="project-card">
+                <img src="./gabut/img/membuat-pohon.png" alt="Gambar membuat pohon" />
+                <h3>membuat pohon</h3>
+            </a>
+            
+            <!-- Proyek 19 -->
+            <a href="./gabut/naga-bersin/index.html" class="project-card">
+                <img src="./gabut/img/naga-bersin.png" alt="Gambar naga bersin" />
+                <h3>naga bersin</h3>
+            </a>
+            
+            <!-- Proyek 20 -->
+            <a href="./gabut/pembuat-text/index.html" class="project-card">
+                <img src="./gabut/img/pembuat-text.png" alt="Gambar pembuat text" />
+                <h3>pembuat text</h3>
+            </a>
+            
+            <!-- Proyek 21 -->
+            <a href="./gabut/piano/index.html" class="project-card">
+                <img src="./gabut/img/piano.png" alt="Gambar piano" />
+                <h3>piano</h3>
+            </a>
+            
+            <!-- Proyek 22 -->
+            <a href="./gabut/portal-infiniti/index.html" class="project-card">
+                <img src="./gabut/img/portal-infiniti.png" alt="Gambar portal infinity" />
+                <h3>portal infinity</h3>
+            </a>
+            
+            <!-- Proyek 23 -->
+            <a href="./gabut/presentase-baterai/index.html" class="project-card">
+                <img src="./gabut/img/presentase-baterai.png" alt="Gambar baterai" />
+                <h3>presentasi baterai</h3>
+            </a>
+            
+            <!-- Proyek 24 -->
+            <a href="./gabut/replika-komputer/index.html" class="project-card">
+                <img src="./gabut/img/replika-komputer.png" alt="Gambar replika komputer" />
+                <h3>replika komputer</h3>
+            </a>
+            
+            <!-- Proyek 25 -->
+            <a href="./gabut/shader-api-3D/index.html" class="project-card">
+                <img src="./gabut/img/shader-api-3D.png" alt="Gambar shader api" />
+                <h3>shader api 3D</h3>
+            </a>
+            
+            <!-- Proyek 26 -->
+            <a href="./gabut/singa-kepanasan/index.html" class="project-card">
+                <img src="./gabut/img/singa-kepanasan.png" alt="Gambar singa" />
+                <h3>singa kepanasan</h3>
+            </a>
+            
+            <!-- Proyek 27 -->
+            <a href="./gabut/spinner-carnaval/index.html" class="project-card">
+                <img src="./gabut/img/spinner-carnaval.png" alt="Gambar spinner carnaval" />
+                <h3>spinner carnaval</h3>
+            </a>
+            
+            <!-- Proyek 28 -->
+            <a href="./gabut/video-text/index.html" class="project-card">
+                <img src="./gabut/img/video-text.png" alt="Gambar video to text" />
+                <h3>video to text</h3>
+            </a>
+        </div>
+
+        <script>
+            const themes = ["default", "dark", "soft"];
+            let currentThemeIndex = 0;
+            let isSpinning = false;
+
+            function toggleTheme() {
+                if (isSpinning) return;
+
+                isSpinning = true;
+                const themeButton = document.querySelector(".theme-button");
+
+                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+                const themeName = themes[currentThemeIndex];
+                document.body.className = "";
+                if (themeName !== "default") {
+                    document.body.classList.add(themeName + "-theme");
+                }
+
+                themeButton.style.animation = "none";
+                themeButton.offsetHeight;
+                themeButton.style.animation =
+                    "spin-and-stop 1.5s cubic-bezier(0.2, 0.8, 0.5, 1) forwards";
+
+                setTimeout(() => {
+                    isSpinning = false;
+                }, 1500);
+            }
+
+            const backgroundLightContainer = document.querySelector(
+                ".background-light-container"
+            );
+            for (let i = 0; i < 30; i++) {
+                const lightStreak = document.createElement("div");
+                lightStreak.className = "light-streak";
+
+                const startX = Math.random() * 120 - 20;
+                const startY = Math.random() * 120 - 20;
+
+                lightStreak.style.setProperty("--x", `${startX}vw`);
+                lightStreak.style.setProperty("--y", `${startY}vh`);
+                lightStreak.style.animationDelay = `${Math.random() * 5}s`;
+                lightStreak.style.animationDuration = `${
+                    Math.random() * 5 + 3
+                }s`;
+
+                backgroundLightContainer.appendChild(lightStreak);
+            }
+        </script>
+    </body>
+</html>
