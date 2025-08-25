@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ular Matematika</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="screen-wrapper">
+        <div id="start-screen">
+            <h1>ULAR MATEMATIKA</h1>
+            <p>Makan makanannya sambil memecahkan soal matematika! Gunakan kemampuan matematikamu untuk menggerakkan ularnya.</p>
+            <label for="difficulty">Pilih Tingkat Kesulitan:</label>
+            <select id="difficulty">
+                <option value="easy">Easy (Penjumlahan & Pengurangan)</option>
+                <option value="hard">Hard (Perkalian & Pembagian)</option>
+            </select>
+            <button id="start-button">START</button>
+        </div>
+    </div>
+
+    <div id="game-screen" style="display: none;">
+        <h1 id="game-title">ULAR MATEMATIKA</h1>
+        <div id="game-controls">
+            <div class="control-section">
+                <span id="score-display">SCORE: 0</span>
+            </div>
+            <div class="control-section">
+                <span id="level-display">LEVEL: Easy</span>
+            </div>
+            <div class="control-section">
+                <span id="lives-display">LIVE: 5</span>
+            </div>
+        </div>
+        <div id="control-buttons">
+            <button id="pause-button"></button>
+            <button id="audio-toggle"></button>
+            <button id="restart-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V1L7 6L12 11V7C15.31 7 18 9.69 18 13C18 16.31 15.31 19 12 19C8.69 19 6 16.31 6 13H4C4 17.42 7.58 21 12 21C16.42 21 20 17.42 20 13C20 8.58 16.42 5 12 5Z" fill="black"/>
+                </svg>
+            </button>
+        </div>
+        <canvas id="game-canvas" width="520" height="341"></canvas>
+        <div id="question-area">
+            <div id="question"></div>
+            <div id="multiple-choice">
+                <button class="choice"></button>
+                <button class="choice"></button>
+                <button class="choice"></button>
+            </div>
+            <div id="timer-bar" style="--width: 100%"></div>
+        </div>
+    </div>
+
+    <div id="game-over-screen" style="display: none;">
+        <div class="flex-top">
+            <h1>GAME OVER</h1>
+            <span id="highscore">0</span>
+        </div>
+        <p>YOUR SCORE: <span id="final-score"></span></p>
+        <p>HIGHSCORE: <span id="highscore"></span></p>
+        <button id="play-again-button">PLAY AGAIN</button>
+        <button id="share-button">SHARE SCORE</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

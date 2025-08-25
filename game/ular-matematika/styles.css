@@ -1,0 +1,442 @@
+body {
+    font-family: 'Bangers', Arial, sans-serif;
+    letter-spacing: 3px; /* Apply to all text by default */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #E8EEEF;
+    position: relative;
+}
+
+#start-screen, #game-over-screen {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in;
+    width: 400px;
+    max-width: 100%;
+
+    display: flex; /* Added for consistent layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Consistent gap between elements */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.flex-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#start-screen p {
+    font-family: Arial, sans-serif; /* Arial, so no letter-spacing change */
+    letter-spacing: normal; /* Reset to default */
+}
+
+#start-screen h1, #game-over-screen h1 {
+    font-family: 'Bangers', Arial, sans-serif; /* Explicitly set to ensure clarity */
+    letter-spacing: 5px; /* Apply letter-spacing */
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+#game-screen {
+    text-align: center;
+    position: relative;
+}
+
+#game-title {
+    font-family: 'Bangers', Arial, sans-serif; /* Explicitly set */
+    letter-spacing: 5px; /* Apply letter-spacing */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: space-between;
+    background: #E8CB4A;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 5px;
+    width: fit-content;
+    margin: auto;
+}
+
+.control-section {
+    padding: 5px 10px;
+    border-right: 2px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.control-section:last-child {
+    border-right: none;
+}
+
+.control-section span {
+    font-family: 'Bangers', Arial, sans-serif; /* Explicitly set */
+    font-size: 20px;
+    color: #F4E074;
+    -webkit-text-stroke: 1px #000;
+}
+
+#control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+#game-canvas {
+    background: #F4E074;
+    border: 2px solid #000;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 520px;
+    height: 341px;
+}
+
+#question-area {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#question {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000;
+    letter-spacing: normal; /* Reset to default for Arial */
+}
+
+#multiple-choice {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    visibility: visible;
+}
+
+.choice {
+    padding: 10px 20px;
+    background: #E8CB4A;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+    transition: transform 0.1s;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    letter-spacing: normal; /* Reset to default for Arial */
+}
+
+.choice:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.choice:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+#timer-bar {
+    width: 200px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 8px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#timer-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: #E8CB4A;
+    transform: translateX(-50%) scaleX(1);
+    transform-origin: center;
+    transition: transform 0.1s linear;
+}
+
+#timer-bar[style*="--width"]::before {
+    transform: translateX(-50%) scaleX(calc(var(--width) / 100));
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #E8CB4A;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 6px;
+    transition: transform 0.1s;
+    font-family: 'Bangers', Arial, sans-serif;
+    letter-spacing: 3px; /* Apply letter-spacing */
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 1); /* Apply shadow */
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#pause-button, #audio-toggle, #restart-button {
+    background: #eeeeee;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+#pause-button {
+    background: #757575;
+    color: #fff;
+}
+
+#audio-toggle:hover, #pause-button:hover, #restart-button:hover {
+    background: #666;
+}
+
+/* Mobile optimizations for 425px and below */
+@media (max-width: 425px) {
+    body {
+        align-items: flex-start; /* Align content to the top */
+        height: 100vh; /* Use full viewport height */
+        min-height: 100vh; /* Ensure at least full viewport height */
+        overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+    #start-screen, #game-over-screen {
+        width: 90%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 80vh;
+        overflow-y: auto;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #start-screen h1, #game-over-screen h1 {
+        font-size: 24px; /* Reduced for tighter fit */
+        margin: 5px 0; /* Reduced margin */
+    }
+
+    #start-screen p {
+        font-size: 14px; /* Reduced font size for description */
+        margin: 5px 0; /* Reduced margin */
+    }
+
+    #game-screen {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        overflow-y: auto;
+        align-content: center;
+    }
+
+    #game-title {
+        font-size: 24px; /* Reduced for mobile */
+        margin: 5px 0; /* Reduced margin */
+    }
+
+    #game-controls {
+        width: calc(100% - 40px);
+        margin: 25px auto;
+        justify-content: space-around;
+        padding: 0px;
+        height: 28px;
+    }
+
+    .control-section {
+        padding: 2px 6px; /* Further reduced padding */
+    }
+
+    .control-section span {
+        letter-spacing: 2px; /* Reduced for better fit */
+        text-shadow: 1px 1px 0 #000;
+    }
+
+    #control-buttons {
+        flex-direction: row; /* Align horizontally */
+        justify-content: center;
+        gap: 6px; /* Further reduced gap for mobile */
+        margin: 5px 0; /* Reduced margin */
+    }
+
+    button {
+        padding: 8px 16px; /* Slightly smaller but still thumb-friendly */
+        font-size: 14px; /* Reduced for mobile */
+    }
+
+    #pause-button, #audio-toggle, #restart-button {
+        padding: 6px; /* Further reduced */
+        width: 36px; /* Slightly smaller */
+        height: 36px;
+    }
+
+    #game-canvas {
+        width: calc(100% - 40px);
+        height: 180px;
+        margin: 20px;
+    }
+
+    #question-area {
+        margin-top: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #multiple-choice {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin: 5px auto;
+        flex-wrap: wrap;
+    }
+
+    .choice {
+        padding: 8px 16px; /* Slightly smaller but still thumb-friendly */
+        font-size: 12px; /* Further reduced for mobile */
+        width: 80px; /* Further reduced width */
+        text-align: center;
+    }
+
+    #timer-bar {
+        width: calc(100% - 40px); /* 20px margin on both sides */
+        margin: 5px 20px; /* Reduced margin */
+        height: 18px; /* Slightly increased for visibility */
+        position: relative;
+    }
+}
+
+/* Ensure viewport meta tag is applied (add to index.html if missing) */
+@supports (-webkit-overflow-scrolling: touch) {
+    /* This is a hack to target mobile devices, but add the meta tag for reliability */
+}
+
+/* ==== New styles for dropdown visibility ======== */
+#difficulty {
+    display: block; /* Ensure dropdown is visible by default on start screen */
+}
+
+#game-screen #difficulty,
+#game-over-screen #difficulty {
+    display: none; /* Hide dropdown on game and game-over screens */
+}
+
+#difficulty-container {
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.screen-container.show-difficulty #difficulty-container {
+    display: block; /* Show when .show-difficulty is present */
+}
+
+#difficulty-container label {
+    font-family: 'Bangers', Arial, sans-serif;
+    letter-spacing: 3px;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+}
+
+#difficulty {
+    font-family: 'Bangers', Arial, sans-serif;
+    letter-spacing: 3px;
+    /* font-size: 18px; */
+    color: #000;
+    background: #E7E7E7; /* Restored background color */
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 12px 20px;
+    text-align: center;
+    /* box-shadow: 2px 2px 0 rgba(0, 0, 0, 1); */
+    cursor: pointer;
+    transition: transform 0.1s;
+    width: 300px;
+    max-width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    outline: none;
+}
+
+#difficulty-container span.arrow {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* font-size: 18px; */
+    color: #000;
+    pointer-events: none;
+}
+
+#difficulty:hover {
+    transform: scale(1.05); /* Ensured hover effect works */
+}
+
+#difficulty option {
+    font-family: 'Bangers', Arial, sans-serif;
+    letter-spacing: 3px;
+    background: #F4E074;
+    color: #000;
+    padding: 10px;
+}
+
+@media (max-width: 425px) {
+    #difficulty-container label {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    #difficulty {
+        font-size: 12px;
+        padding: 10px 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #difficulty-container span.arrow {
+        right: 15px;
+        font-size: 16px;
+    }
+}
