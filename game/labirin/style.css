@@ -1,0 +1,212 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#mazeContainer {
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  top: 75px;
+  opacity: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+#mazeContainer #mazeCanvas {
+  margin: 0;
+  display: block;
+  border: solid 1px black;
+}
+
+input,
+select {
+  transition-property: background-color opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+input:hover,
+select:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+input:active,
+select:active {
+  background-color: black;
+}
+input:focus,
+select:focus {
+  outline: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#dropdownBtn {
+  background-color: rgba(0, 0, 0, 0.3); /* samain dengan input */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px; /* samain juga */
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  /* hapus backdrop-filter & border lama */
+}
+#dropdownBtn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#dropdownBtn:active {
+  background-color: black;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.dropdown-content div {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hidden {
+  display: none;
+}
+#Message-Container {
+  visibility: hidden;
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+#Message-Container #message {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+#page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+#page #menu {
+  margin: auto;
+  padding: 10px;
+  height: 65px;
+  box-sizing: border-box;
+}
+#page #menu h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+#page #view {
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+#gradient {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+          animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  input, select {
+    width: 120px;
+  }
+}
