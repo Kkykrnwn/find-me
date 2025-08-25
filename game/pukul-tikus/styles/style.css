@@ -1,0 +1,150 @@
+/** {*/
+/*  border: 1px solid black;*/
+/*}*/
+body {
+  margin: 0;
+  padding: 0;
+}
+.kantor-mode {
+  background-color: #d8dad7;
+}
+.tanah-mode {
+  background-color: #ffb436;
+}
+.judul,
+#score {
+  text-align: center;
+  z-index: 99;
+  transition: 0.3s;
+}
+#score.selesai {
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  transform: scale(7.6) translate(0, 30px);
+  z-index: 99;
+}
+.kotakScore {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+}
+#akurasi {
+  transition: 0.3s;
+}
+#akurasi.selesai {
+  transform: scale(1.5) translate(0, -170px);
+  position: fixed;
+}
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 99;
+}
+#loader .isi {
+  width: 300px;
+  height: 40px;
+  border: 4px solid black;
+  border-radius: 20px;
+}
+#loader .isi div {
+  width: 0%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #88ff3f;
+}
+.btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid #3c6d02;
+  background-color: #afe907;
+}
+.kantor-mode .btn {
+  border: 2px solid #3c6d02;
+  background-color: #afe907;
+}
+.tanah-mode .btn {
+  border: 2px solid #6d3402;
+  background-color: #e98f07;
+}
+.container {
+  max-width: 564px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.kotak {
+  display: flex;
+  justify-content: center;
+  display: inline-block;
+  width: 145px;
+  height: 96px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.tanah {
+  width: 150px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.tikus {
+  height: 100%;
+  /*margin: 8px auto;*/
+  margin: auto;
+  display: block;
+  transform: scaleX(0.3) translate(0, 120px);
+  transition: 0.25s;
+}
+/*.tikus:active {*/
+/*  transform: scale(1.2);*/
+/*  transition: 0.1s;*/
+/*}*/
+.tikus.active {
+  transform: scaleX(1) translate(0, 0);
+}
+.tikus.active.idle {
+  transform: scaleX(-1);
+}
+.tikus:hover {
+  cursor: pointer;
+}
+.cursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 3px solid yellow;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: scale-up 0.4s ease-out;
+  opacity: 0;
+  z-index: 999;
+}
+@keyframes scale-up {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
