@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+#display {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  resize: none;
+  text-align: right;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+hr {
+  width: 80%;
+  border-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 15px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);/* Transisi lembut untuk semua tombol */
+  transition: transform 0.1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button button {
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background: linear-gradient(145deg, #2e3b4e, #1b2635);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #636e72;
+}
+
+
+/* Animasi tombol ditekan */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Efek "tekan lalu hilang warna" */
+button.pressed {
+  background-color: #00b894 !important;
+  box-shadow: 0 0 10px #00b894;
+}
+
+#eraser {
+  background: #00b894;
+  font-size: 20px;
+  padding: 15px 0;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#eraser:hover {
+  background: #55efc4;
+}
+
+#eraser.pressed {
+  background-color: #00cec9 !important;
+}
+
+#eq {
+  grid-column: span 4;
+  background: #d63031;
+  font-size: 24px;
+  padding: 15px 0;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#eq:hover {
+  background: #e17055;
+}
+
+#eq.pressed {
+  background-color: #e84393 !important;
+}
+

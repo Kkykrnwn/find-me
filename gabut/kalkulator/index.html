@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalkulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>KALKULATOR</h2>
+  <textarea id="display" cols="30" rows="2" readonly></textarea>
+  <hr>
+  <div class="button">
+    <button onclick="fn1()">1</button>
+    <button onclick="fn2()">2</button>
+    <button onclick="fn3()">3</button>
+    <button onclick="ac()">AC</button>
+
+    <button onclick="fn4()">4</button>
+    <button onclick="fn5()">5</button>
+    <button onclick="fn6()">6</button>
+    <button onclick="add()">+</button>
+
+    <button onclick="fn7()">7</button>
+    <button onclick="fn8()">8</button>
+    <button onclick="fn9()">9</button>
+    <button onclick="ngv()">-</button>
+
+    <button onclick="mul()">x</button>
+    <button onclick="fn0()">0</button>
+    <button onclick="dv()">:</button>
+    <button id="eraser" onclick="feraser()">⌫</button>
+
+    <button id="eq" onclick="eq()">=</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
