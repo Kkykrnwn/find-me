@@ -543,6 +543,354 @@
             <!-- Game 16 -->
             <div
                 class="game-card"
+                data-url="./game/game-url/index.html"
+            >
+                <img
+                    src="./game/img/game-url.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">GAME URL</h3>
+                </div>
+            </div>
+
+
+            <!-- Game 17 -->
+            <div
+                class="game-card"
+                data-url="./game/kelinci-pemberani/index.html"
+            >
+                <img
+                    src="./game/img/kelinci-pemberani.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">KELINCI PEMBERANI</h3>
+                </div>
+            </div>
+
+            <!-- Game 18 -->
+            <div class="game-card" data-url="./game/labirin/index.html">
+                <img
+                    src="./game/img/labirin.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">LABIRIN</h3>
+                </div>
+            </div>
+
+            <!-- Game 19 -->
+            <div class="game-card" data-url="./game/labirin-miring/index.html">
+                <img
+                    src="./game/img/labirin-miring.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">LABIRIN MIRING</h3>
+                </div>
+            </div>
+
+            <!-- Game 20 -->
+            <div class="game-card" data-url="./game/ludo/index.html">
+                <img
+                    src="./game/img/ludo.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">LUDO</h3>
+                </div>
+            </div>
+
+            <!-- Game 21 -->
+            <div class="game-card" data-url="./game/mad-shark/index.html">
+                <img
+                    src="./game/img/mad-shark.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">MAD SHARK</h3>
+                </div>
+            </div>
+
+            <!-- Game 22 -->
+            <div class="game-card" data-url="./game/memori-kartu/index.html">
+                <img
+                    src="./game/img/memori-kartu.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">MEMORI                     opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes cardEntry {
+                from {
+                    opacity: 0;
+                    transform: scale(0.9);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            /* Sequential animation delay for cards */
+            .game-card:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            .game-card:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .game-card:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+            .game-card:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+            .game-card:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+            .game-card:nth-child(6) {
+                animation-delay: 0.6s;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .header h1 {
+                    font-size: 2rem;
+                }
+
+                .games-container {
+                    grid-template-columns: repeat(
+                        auto-fill,
+                        minmax(220px, 1fr)
+                    );
+                    gap: 20px;
+                }
+
+                .game-title {
+                    font-size: 0.85rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .games-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .header h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>GAME COLLECTION</h1>
+        </div>
+
+        <div class="games-container">
+            <!-- Game 1 -->
+            <div class="game-card" data-url="./game/2048/index.html">
+                <img
+                    src="./game/img/2048.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">2048</h3>
+                </div>
+            </div>
+
+            <!-- Game 2 -->
+            <div
+                class="game-card"
+                data-url="./game/batu-kertas-gunting/index.html"
+            >
+                <img
+                    src="./game/img/batu-kertas-gunting.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">BATU KERTAS GUNTING</h3>
+                </div>
+            </div>
+
+            <!-- Game 3 -->
+            <div
+                class="game-card"
+                data-url="./game/permainan-matematika/index.html"
+            >
+                <img
+                    src="./game/img/permainan-matematika.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">PERMAINAN MATEMATIKA</h3>
+                </div>
+            </div>
+
+            <!-- Game 4 -->
+            <div
+                class="game-card"
+                data-url="./game/brick-breaker-2D/index.html"
+            >
+                <img
+                    src="./game/img/brick-breaker-2D.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">BRICK BREAKER 2D</h3>
+                </div>
+            </div>
+
+            <!-- Game 5 -->
+            <div class="game-card" data-url="./game/bubble-shooter/index.html">
+                <img
+                    src="./game/img/bubble-shooter.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">BUBBLE SHOOTER</h3>
+                </div>
+            </div>
+
+            <!-- Game 6 -->
+            <div class="game-card" data-url="./game/catur/index.html">
+                <img
+                    src="./game/img/catur.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">CATUR</h3>
+                </div>
+            </div>
+
+            <!-- Game 7 -->
+            <div class="game-card" data-url="./game/catur-absurd/index.html">
+                <img
+                    src="./game/img/catur-absurd.png"
+                    alt="Catur Absurd"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">CATUR ABSURD</h3>
+                </div>
+            </div>
+
+            <!-- Game 8 -->
+            <div class="game-card" data-url="./game/connect-four/index.html">
+                <img
+                    src="./game/img/connect-four.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">CONNECT FOUR</h3>
+                </div>
+            </div>
+
+            <!-- Game 9 -->
+            <div class="game-card" data-url="./game/crossy-road/index.html">
+                <img
+                    src="./game/img/crossy-road.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">CROSSY ROAD</h3>
+                </div>
+            </div>
+
+            <!-- Game 10 -->
+            <div class="game-card" data-url="./game/dino-chrome/index.html">
+                <img
+                    src="./game/img/dino-chrome.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">DINOSAURUS CHROME</h3>
+                </div>
+            </div>
+
+            <!-- Game 11 -->
+            <div class="game-card" data-url="./game/dino-memory/index.html">
+                <img
+                    src="./game/img/dino-memory.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">DINOSAURUS MEMORY</h3>
+                </div>
+            </div>
+
+            <!-- Game 12 -->
+            <div class="game-card" data-url="./game/duck-hunt/index.html">
+                <img
+                    src="./game/img/duck-hunt.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">DUCK HUNT</h3>
+                </div>
+            </div>
+
+            <!-- Game 13 -->
+            <div class="game-card" data-url="./game/flappy-bird/index.html">
+                <img
+                    src="./game/img/flappy-bird.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">FLAPPY BIRD</h3>
+                </div>
+            </div>
+
+            <!-- Game 14 -->
+            <div class="game-card" data-url="./game/flappy-jump/index.html">
+                <img
+                    src="./game/img/flappy-jump.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">FLAPPY JUMP</h3>
+                </div>
+            </div>
+
+            <!-- Game 15 -->
+            <div class="game-card" data-url="./game/fruit-ninja/index.html">
+                <img
+                    src="./game/img/fruit-ninja.png"
+                    alt="Gambar Game"
+                    class="game-image"
+                />
+                <div class="game-info">
+                    <h3 class="game-title">FRUIT NINJA</h3>
+                </div>
+            </div>
+
+            <!-- Game 16 -->
+            <div
+                class="game-card"
                 data-url="./game/kelinci-pemberani/index.html"
             >
                 <img
