@@ -1,0 +1,338 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .content {
+            max-width: 40rem;
+            padding: 2rem;
+            margin: auto;
+        }
+        
+        .top {
+            margin: 0;
+            left: 4em;
+        }
+        
+        h1 {
+            font-size: 5em;
+            font-weight: 400;
+            margin-top: 1em;
+        }
+        
+        h2 {
+            font-weight: 400;
+        }
+        
+        .instructions,
+        .instructions_mobile {
+            font-size: 1.6em;
+        }
+        
+        .instructions_mobile {
+            display: none;
+        }
+        
+        .score {
+            margin-left: 5em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 1em;
+        }
+        
+
+        @media only screen and (max-width: 800px) {
+            .instructions_mobile {
+                display: block;
+                font-size: 1.3em;
+            }
+            .instructions {
+                display: none;
+            }
+            .content {
+                padding: 0.5em;
+                margin: auto;
+            }
+            .top {
+                left: 1em;
+            }
+            .bottom,
+            .score {
+                margin-left: 0;
+                display: block;
+            }
+            .small-text {
+    font-size: 0.8em; /* Atau kamu bisa sesuaikan dengan ukuran yang diinginkan */
+  }
+            h1 {
+                font-size: 2.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="top">Lihatlah URL-nya ☝ <span class="score"></span></h2>
+    <div class="content">
+        <h1>
+            Tembak Ayam<br>
+            <b>Edisi Emoji 🐔</b>
+        </h1>
+        <div class="instructions">Tekan ➡️ atau spasi untuk menembakkan laser ke 🐓🥚 tapi jangan tembak 🛸</div>
+
+        <div class="instructions_mobile">👆 Tekan untuk menembakkan laser ke 🐓🥚 tapi jangan tembak 🛸
+        <span class="small-text"><br>
+          (miringkan ponsel anda ke menjadi <b>lanscape</b> untuk memainkan game nya)</span>
+          </div>
+    </div>
+
+    </a>
+    <style>
+
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+    </style>
+
+    <script>
+        var width = 50;
+        var speed = 60;
+        var space = "_";
+        var animation_layer;
+        var items;
+        var bonus = false;
+        var score = 0;
+        var highscore = 0;
+        var moons = ['🌑', '🌘', '🌗', '🌖', '🌕', '🌔', '🌓', '🌒'];
+
+        // 🐥🥚🐤🐓🐦🍗🐣🐔
+
+        function spawn_enemies() {
+            if (Math.random() < 0.02) {
+                spawn("🐓", "🐦", -1, width, true);
+            } else if (Math.random() < 0.01) {
+                spawn("🥚", "🐣", -1, width, true);
+            } else if (Math.random() < 0.01) {
+                spawn("🛸", null,-1, width , true);
+            }
+        }
+
+        function spawn(emoji, death, vector, position, deadly = false, life = false) {
+            items.push(new Item(emoji, death, vector, position, deadly, life));
+        }
+
+        function Item(emoji, death, vector, position, deadly, life) {
+            this.emoji = emoji;
+            this.death = death;
+            this.vector = vector;
+            this.position = position + vector;
+            this.deadly = deadly;
+            this.life = life;
+            this.alive = true;
+        }
+
+        function init() {
+            if (window.matchMedia( "(max-width: 800px)" ).matches) {
+              width = 20;
+              speed = 80;
+            }
+
+            animation_layer = new Array(width).fill(space);
+            items = [];
+            spawn("🛸", "💥", 0, 0, false);
+        }
+
+        function is_alive() {
+            return items.length > 0 && items[0].emoji == "🛸" && items[0].alive;
+        }
+
+        function game() {
+            if (!is_alive()) {
+                game_over();
+                return;
+            }
+            display();
+            animation_cycle();
+            item_cycle();
+            spawn_enemies();
+        }
+
+        var animations = {
+            "🐥": "💥",
+            "🐦": "💥",
+            "💥": "💢",
+        };
+
+        function display() {
+            var display = animation_layer;
+
+            for (var position = 1; position < width; position++) {
+                for (var i = 0; i < items.length; i++) {
+                    if (items[i].position == position) {
+                        display[position] = items[i].emoji;
+                    }
+                }
+            }
+
+            location.hash = display.join("");
+
+            document.title = moons[Math.floor((Date.now() / 100) % moons.length)];
+        }
+
+        function display_score() {
+            if (highscore <= score) {
+                highscore = score;
+            }
+
+            document.querySelector(".score").innerText = ("Score: " + score + " - Highscore: " + highscore);
+        }
+
+        function animation_cycle() {
+            for (var i = 0; i < animation_layer.length; i++) {
+                if (animation_layer[i] == "🐣") {
+                    spawn("🐤", "🐥", -1, i, true);
+                    animation_layer[i] = space;
+                } else if (animation_layer[i] == "🐦") {
+
+                    if (Math.random() < 0.2 && bonus) {
+                        spawn("🍗", null, -1, i, false, true);
+                    } else {
+                        animation_layer[i] = "💥";
+                    }
+                } else if (animation_layer[i] in animations) {
+                    animation_layer[i] = animations[animation_layer[i]];
+                } else {
+                    animation_layer[i] = space;
+                }
+            }
+        }
+
+        function item_cycle() {
+            for (var i = 0; i < items.length; i++) {
+                var position = items[i].position;
+                items[i].position += items[i].vector;
+
+                if (collisions(items[i])) {
+                    if (items[i] && items[i].death) {
+                        animation_layer[items[i].position] = items[i].death;
+                    }
+                    kill(items[i]);
+                } else if (items[i].position >= width || items[i].position < 0) {
+                    if (items[i].emoji != "🛸") {
+                        kill(items[i]);
+                    }
+                }
+            }
+
+            items = items.filter(item => item.alive);
+        }
+
+        function kill(item) {
+            if (item === undefined) return;
+            item.alive = false;
+            
+            if (item.emoji == "🛸" && item.deadly) {
+                items = items.filter(item => item.emoji != "🛸");
+            }
+        }
+
+        function collisions(item) {
+            if (item.deadly)
+                return false;
+
+            var position = item.position;
+            for (var i = 0; i < items.length; i++) {
+                if (Math.abs(items[i].position - position) < 2 && items[i].deadly && items[i].emoji != item.emoji) {
+                    if (items[i].death) {
+                        animation_layer[items[i].position] = items[i].death;
+                    }
+                    score++;
+                    display_score();
+
+                    kill(items[i]);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        document.onkeydown = checkKey;
+        document.ontouchstart = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+
+            spawn("-", null, 1, 1, false);
+
+            if (!is_alive()) {
+                score = 0;
+                display_score();
+                init();
+            }
+        }
+
+        function reverseString(str) {
+            return str.split("").reverse().join("");
+        }
+
+        function game_over() {
+            var i, n, wave = '';
+
+            for (i = 0; i < (width/5); i++) {
+                n = Math.floor(Math.sin((Date.now() / 200) + (i / 2)) * 4) + 4;
+                wave += String.fromCharCode(0x2581 + n);
+            }
+            var string = wave + "[Game_Over]" + reverseString(wave);
+            items = [];
+            animation_layer = string.split("");
+            display();
+        }
+
+        init();
+        window.setInterval(game, speed);
+        
+        let lastTouchEnd = 0;
+
+document.addEventListener('touchend', function (event) {
+  let now = new Date().getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault(); // mencegah double-tap zoom
+  }
+  lastTouchEnd = now;
+}, false);
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="./script.js"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128361486-1');
+    </script>
+</body>
+
+</html>
