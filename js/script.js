@@ -186,7 +186,7 @@ function changePicture() {
 
     return gambar[gambar.length - 1]
   }
-  let gambar = './images/kiky.png'
+  let gambar = './images/kiky2.png'
   let gambarEl = document.querySelector('#profile img')
 
   gambarEl.src = onlyImage(gambar) == onlyImage(gambarEl.src) ? './images/kiky.png' : gambar
