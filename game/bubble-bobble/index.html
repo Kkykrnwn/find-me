@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bubble Bobble</title>
+
+    <script type="text/javascript" src="assets/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="assets/js.js"></script>
+
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            color: white;
+            touch-action: manipulation; /* Mencegah zoom saat tap cepat */
+        }
+
+        /* Container Utama */
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px; /* Batas maksimal seperti aslinya */
+        }
+
+        /* Styling Canvas */
+        canvas#mainScreen {
+            background: #000;
+            border: 2px solid #333;
+            /* Responsif: lebar penuh di HP, tetap 500px di Desktop */
+            width: 100% !important;
+            height: auto !important; 
+            max-width: 500px;
+        }
+
+        /* Container Tombol Kontrol (Khusus Mobile) */
+        .mobile-controls {
+            display: none; /* Sembunyi secara default (Desktop) */
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .d-pad, .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Styling Tombol Gambar */
+        .mobile-controls img {
+            width: 70px; /* Ukuran tombol yang nyaman untuk jempol */
+            height: auto;
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+            opacity: 0.8;
+        }
+
+        .mobile-controls img:active {
+            opacity: 1.0;
+            transform: scale(1.1);
+        }
+
+        /* MEDIA QUERY UNTUK MOBILE */
+        @media screen and (max-width: 768px) {
+            .mobile-controls {
+                display: flex; /* Munculkan di layar kecil */
+            }
+            
+            /* Sembunyikan elemen aslinya agar tidak dobel */
+            #leftArrow, #rightArrow, #fireArrow, #upArrow {
+                display: block !important; /* Paksa muncul di dalam flex */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="game-container">
+    <canvas id="mainScreen" width="264" height="224"></canvas>
+
+    <div class="mobile-controls">
+        <div class="d-pad">
+            <img id="leftArrow" src="assets/left.png" alt="Left">
+            <img id="rightArrow" src="assets/right.png" alt="Right">
+        </div>
+        
+        <div class="action-buttons">
+            <img id="upArrow" src="assets/upp.png" alt="Jump">
+            <img id="fireArrow" src="assets/fire.png" alt="Fire">
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+    <img id="fontImage" src="assets/font.png">
+    <img id="lifeImage" src="assets/life.png">
+    <img id="bubSheet" src="assets/bubScaled.png">
+    <img id="bubStunned" src="assets/bub_stunned.png">
+    <img id="bubFloat" src="assets/bub_flotting.png">
+    <img id="bubbleSheet" src="assets/bubblesheet.png">
+    <img id="zenSheet" src="assets/zenchan_sheet.png">
+    <img id="zenBubbled" src="assets/zenchan_bubbled.png">
+    <img id="zenDefeated" src="assets/zenchan_defeated.png">
+    <img id="level1TileImage" src="images/level1/basictile.png">
+    <img id="level1BigTileImage" src="images/level1/columntile.png">
+    <img id="level2TileImage" src="images/level2/basictile.png">
+    <img id="level2BigTileImage" src="images/level2/columntile.png">
+    <img id="level3TileImage" src="images/level3/basictile.png">
+    <img id="level3BigTileImage" src="images/level3/columntile.png">
+    <img id="level4TileImage" src="images/level4/basictile.png">
+    <img id="level4BigTileImage" src="images/level4/columntile.png">
+    <img id="level5TileImage" src="images/level5/basictile.png">
+    <img id="level5BigTileImage" src="images/level5/columntile.png">
+    <img id="level6TileImage" src="images/level6/basictile.png">
+    <img id="level6BigTileImage" src="images/level6/columntile.png">
+    <img id="fruitSheet" src="assets/fruits.png">
+    <img id="fruitScores" src="assets/fruitScores.png">
+</div>
+
+</body>
+</html>
