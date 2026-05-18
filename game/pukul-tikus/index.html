@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pukul Tikus Nackal</title>
+  <link rel="canonical" href="https://pianndi.github.io/tikus">
+  <meta name="description"
+    content="Sebuah game untuk membasmi para tikus-tikus berdasi. Plis jangan tangkap saya Pak!!">
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body class="tanah-mode">
+  <div id="loader">
+    <span>0%</span>
+    <div class="isi">
+      <div></div>
+    </div>
+  </div>
+  <h1 class="judul">Pukul Tikus</h1>
+  <div class="kotakScore">
+    <h2 id="score">0</h2>
+  </div>
+  <center>
+    <p id="highScore">High Score: 0</p>
+    <select id="mode" class="btn" onload="gantiMode(this.selectedIndex)" onchange="gantiMode(this.selectedIndex)">
+      <option value="">Tikus Tanah</option>
+      <option value="">Tikus Kantor</option>
+    </select>
+    <select id="difficulty" class="btn" onload="gantiLevel(this.selectedIndex)"
+      onchange="gantiLevel(this.selectedIndex)">
+      <option value="">Easy</option>
+      <option value="">Medium</option>
+      <option value="">Hard</option>
+    </select>
+    <button id="start" class="btn" onclick="mulai()">Mulai</button>
+  </center>
+  <div class="container">
+    <div class="kotak">
+      <img src="./img/kantor/tikus.png" class="tikus" />
+      <img src="./img/kantor/tanah.png" class="tanah" />
+    </div>
+    <div class="kotak">
+      <img src="./img/kantor/tikus.png" class="tikus" />
+      <img src="./img/kantor/tanah.png" class="tanah" />
+    </div>
+    <div class="kotak">
+      <img src="./img/kantor/tikus.png" class="tikus" />
+      <img src="./img/kantor/tanah.png" class="tanah" />
+    </div>
+    <div class="kotak">
+      <img src="./img/kantor/tikus.png" class="tikus" />
+      <img src="./img/kantor/tanah.png" class="tanah" />
+    </div>
+    <div class="kotak">
+      <img src="./img/kantor/tikus.png" class="tikus" />
+      <img src="./img/kantor/tanah.png" class="tanah" />
+    </div>
+    <div class="kotak">
+      <img src="./img/kantor/tikus.png" class="tikus" />
+      <img src="./img/kantor/tanah.png" class="tanah" />
+    </div>
+  </div>
+  <div class="kotakScore">
+    <p id="akurasi">Akurasi: 0%</p>
+  </div>
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

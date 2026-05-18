@@ -1,0 +1,205 @@
+{
+    "lang": "en",
+    "title": [
+        "ULAR",
+        "(KELUAR DARI",
+        "MODE DESKTOP)"
+    ],
+    "ui": {
+        "games": [
+            "muka ganda",
+            "cincin emas",
+            "rangkaian drama",
+            "obral ayat",
+            "cahaya kamera",
+            "operasi senyum",
+            "makan teman",
+            "panggung tertutup",
+            "asal nyaman",
+            "jual rakyat",
+            "kepentingan sesaat",
+            "kain terbalik",
+            "drama kantor",
+            "main dua kaki",
+            "dibalik rakyat",
+            "tidak sesuai",
+            "digitalisasi diktator",
+            "citra palsu",
+            "pura pura peduli",
+            "dua sisi mata uang"
+        ],
+        "controls": {
+            "keyboard": [
+                "ARROWS",
+                "CONTROL"
+            ],
+            "touch": [
+                "SWIPES",
+                "CONTROL"
+            ]
+        },
+        "definition": {
+            "instructions": {
+                "keyboard": [
+                    "KANAN=CONTINUE",
+                    "M=MENU"
+                ],
+                "touch": [
+                    "GESER KANAN=CONTINUE",
+                    "GESER KIRI=MENU"
+                ]
+            }
+        },
+        "reset": {
+            "keyboard": [
+                "R=RESTART M=MENU"
+            ],
+            "touch": {
+                "restart": [
+                    "RESTART"
+                ],
+                "menu": [
+                    "MENU"
+                ]
+            }
+        },
+        "gameover": "GAME OVER",
+        "youwin": "YOU WIN",
+        "youlose": "YOU LOSE",
+        "points": "POINTS"
+    },
+    "menu": {
+        "ist": "MENUIST",
+        "homepage": "KIKY",
+        "instructions": {
+            "keyboard": [
+                "ATAS/BAWAH=MOVE",
+                "KANAN=SELECT"
+            ],
+            "touch": [
+                "GESER ATAS/BAWAH=MOVE",
+                "GESER KANAN=SELECT"
+            ]
+        }
+    },
+    "muka ganda": {
+        "definition": {
+            "part": "noun",
+            "definition": "Sikap hipokrit yang dilakukan oleh orang-orang yang tampak mendukung satu hal di depan umum, tapi sebenarnya berbalik mendukung yang lain di belakang."
+        }
+    },
+    "cincin emas": {
+        "definition": {
+            "part": "noun",
+            "definition": "Janji-janji manis yang selalu berujung pada keuntungan pribadi atau materi, tanpa peduli dengan nasib orang banyak."
+        }
+    },
+    "rangkaian drama": {
+        "definition": {
+            "part": "noun",
+            "definition": "Keputusan-keputusan yang diambil hanya untuk menjadi tontonan, tapi sebenarnya tak membawa perubahan apa-apa."
+        }
+    },
+    "obral ayat": {
+        "definition": {
+            "part": "noun",
+            "definition": "Penggunaan istilah atau ungkapan berbasis agama atau moral hanya untuk menutupi kesalahan atau kepentingan pribadi."
+        }
+    },
+    "cahaya kamera": {
+        "definition": {
+            "part": "noun",
+            "definition": "Tindakan seorang pejabat yang hanya peduli dengan penampilan di depan publik, sementara masalah sesungguhnya diabaikan di belakang layar."
+        }
+    },
+    "operasi senyum": {
+        "definition": {
+            "part": "noun",
+            "definition": "Tindakan politisi yang memanfaatkan momen tertentu untuk tampil simpatik atau peduli hanya demi mendapatkan suara."
+        }
+    },
+    "makan teman": {
+        "definition": {
+            "part": "noun",
+            "definition": "Ketika seseorang, bahkan rekan sendiri dalam politik, dihianati demi ambisi pribadi atau kekuasaan."
+        }
+    },
+    "panggung tertutup": {
+        "definition": {
+            "part": "noun",
+            "definition": "Politik yang hanya berjalan dalam lingkaran tertutup, di mana keputusan dibuat tanpa transparansi atau partisipasi publik."
+        }
+    },
+    "asal nyaman": {
+        "definition": {
+            "part": "noun",
+            "definition": "Sikap politisi yang hanya memikirkan kenyamanan atau keuntungan pribadi, tanpa memperhatikan kesejahteraan rakyat secara keseluruhan."
+        }
+    },
+    "jual rakyat": {
+        "definition": {
+            "part": "noun",
+            "definition": "Praktik mempermainkan aspirasi rakyat untuk kepentingan politik atau bisnis pribadi, tanpa pernah menepati janji."
+        }
+    },
+    "kepentingan sesaat": {
+        "definition": {
+            "part": "noun",
+            "definition": "Ketika keputusan politik lebih didorong oleh ambisi jangka pendek, ketimbang memikirkan dampak panjang untuk masyarakat."
+        }
+    },
+    "kain terbalik": {
+        "definition": {
+            "part": "noun",
+            "definition": "Kondisi di mana segala sesuatunya tampak teratur, tapi sebenarnya penuh dengan ketidakberesan yang tersembunyi."
+        }
+    },
+    "drama kantor": {
+        "definition": {
+            "part": "noun",
+            "definition": "Pertunjukan teater dalam dunia politik di mana semua masalah diselesaikan dengan dramatis, tapi hasilnya tetap sama."
+        }
+    },
+    "main dua kaki": {
+        "definition": {
+            "part": "noun",
+            "definition": "Sikap seorang politisi yang mendukung dua pihak berbeda sekaligus demi menjaga posisi atau mendapatkan keuntungan pribadi."
+        }
+    },
+    "dibalik rakyat": {
+        "definition": {
+            "part": "noun",
+            "definition": "Ketika politisi menggunakan rakyat sebagai alasan untuk mendapatkan keuntungan pribadi atau melindungi kepentingan mereka."
+        }
+    },
+    "tidak sesuai": {
+        "definition": {
+            "part": "noun",
+            "definition": "Praktik di mana pejabat publik atau politisi berbicara tentang satu hal di depan umum, tapi bertindak berbeda di balik layar."
+        }
+    },
+    "digitalisasi diktator": {
+        "definition": {
+            "part": "noun",
+            "definition": "Fenomena ketika teknologi atau media sosial digunakan untuk mengontrol, memanipulasi opini publik, atau mengabaikan kebebasan berpendapat."
+        }
+    },
+    "citra palsu": {
+        "definition": {
+            "part": "noun",
+            "definition": "Usaha politisi untuk menunjukkan diri sebagai pahlawan atau orang baik, padahal di belakang layar banyak masalah yang disembunyikan."
+        }
+    },
+    "pura pura peduli": {
+        "definition": {
+            "part": "noun",
+            "definition": "Ketika politisi atau pejabat hanya menunjukkan kepedulian pada isu tertentu untuk menarik perhatian, padahal tidak ada tindak lanjut nyata."
+        }
+    },
+    "dua sisi mata uang": {
+        "definition": {
+            "part": "noun",
+            "definition": "Ketika seorang politisi atau pejabat tampil mendukung satu hal, tapi ternyata di balik layar mendukung kebijakan yang bertolak belakang."
+        }
+    }
+}

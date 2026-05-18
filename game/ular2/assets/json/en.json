@@ -1,0 +1,434 @@
+{
+    "lang": "en",
+    "title": [
+        "SNAKISTS"
+    ],
+    "ui": {
+        "games": [
+            "alarmist",
+            "checklist",
+            "conformist",
+            "copyist",
+            "deist",
+            "delist",
+            "demist",
+            "gist",
+            "heist",
+            "narcissist",
+            "nudist",
+            "obstructionist",
+            "onanist",
+            "persist",
+            "plenist",
+            "purist",
+            "sadist",
+            "tourist",
+            "twist",
+            "typist"
+        ],
+        "controls": {
+            "keyboard": [
+                "ARROWS",
+                "CONTROL"
+            ],
+            "touch": [
+                "SWIPES",
+                "CONTROL"
+            ]
+        },
+        "reset": {
+            "keyboard": [
+                "R=RESTART M=MENU"
+            ],
+            "touch": {
+                "restart": [
+                    "RESTART"
+                ],
+                "menu": [
+                    "MENU"
+                ]
+            }
+        },
+        "gameover": "GAME OVER",
+        "youwin": "YOU WIN",
+        "youlose": "YOU LOSE",
+        "points": "POINTS"
+    },
+    "menu": {
+        "ist": "MENUIST",
+        "homepage": "pippinbarr.com",
+        "instructions": {
+            "keyboard": [
+                "UP/DOWN ARROW=MOVE",
+                "RIGHT ARROW=SELECT"
+            ],
+            "touch": [
+                "SWIPE UP/DOWN=MOVE",
+                "SWIPE RIGHT=SELECT"
+            ]
+        }
+    },
+    "definition": {
+        "instructions": {
+            "keyboard": [
+                "RIGHT ARROW=CONTINUE",
+                "M=MENU"
+            ],
+            "touch": [
+                "SWIPE RIGHT=CONTINUE",
+                "SWIPE LEFT=MENU"
+            ]
+        }
+    },
+    "snake": {
+        "state": "snake",
+        "menuName": "SNAKIST",
+        "definition": {
+            "word": "snake",
+            "part": "noun",
+            "definition": "Snake"
+        },
+        "outro": [
+            "SNAKED."
+        ]
+    },
+    "alarmist": {
+        "state": "alarmist",
+        "menuName": "ALARMIST",
+        "definition": {
+            "word": "alarmist",
+            "part": "noun",
+            "definition": "someone who is considered to be exaggerating a danger and so causing needless worry or panic."
+        },
+        "careful": "CAREFUL!",
+        "outro": [
+            "TOLD YOU SO."
+        ]
+    },
+    "checklist": {
+        "state": "checklist",
+        "menuName": "CHECKLIST",
+        "definition": {
+            "word": "checklist",
+            "part": "noun",
+            "definition": "a list of items required, things to be done, or points to be considered, used as a reminder."
+        },
+        "items": [
+            {
+                "text": "START THE DAY",
+                "apples": 0
+            },
+            {
+                "text": "EAT AN APPLE",
+                "apples": 1
+            },
+            {
+                "text": "EAT ANOTHER APPLE",
+                "apples": 2
+            },
+            {
+                "text": "SCORE 50 POINTS",
+                "apples": 5
+            },
+            {
+                "text": "10 MORE APPLES",
+                "apples": 15
+            },
+            {
+                "text": "GET 250 POINTS",
+                "apples": 25
+            }
+        ],
+        "die": {
+            "text": "DIE",
+            "die": true
+        },
+        "outro": {
+            "success": [
+                "GOOD JOB."
+            ],
+            "failure": [
+                "MAYBE",
+                "TOMORROW."
+            ]
+        }
+    },
+    "conformist": {
+        "state": "conformist",
+        "menuName": "CONFORMIST",
+        "definition": {
+            "word": "conformist",
+            "part": "noun",
+            "definition": "a person who conforms to accepted behavior or established practices."
+        },
+        "outro": {
+            "success": [
+                "CONFORMING",
+                "CONFIRMED."
+            ],
+            "failure": [
+                "YOU MUST",
+                "CONFORM."
+            ]
+        }
+    },
+    "copyist": {
+        "state": "copyist",
+        "menuName": "COPYIST",
+        "definition": {
+            "word": "copyist",
+            "part": "noun",
+            "definition": "One who makes copies."
+        },
+        "outro": [
+            "AND THEN",
+            "THERE WERE",
+            "NONE."
+        ]
+    },
+    "deist": {
+        "state": "deist",
+        "menuName": "DEIST",
+        "definition": {
+            "word": "deist",
+            "part": "noun",
+            "definition": "Someone who believes in a single god who created the world but does not act to influence events."
+        },
+        "controls": [
+            "DO NOT",
+            "INTERVENE."
+        ],
+        "outro": [
+            "WELL, THAT",
+            "HAPPENED."
+        ]
+    },
+    "delist": {
+        "state": "menu",
+        "menuName": "DELIST",
+        "definition": {
+            "word": "delist",
+            "part": "verb",
+            "definition": "Remove from a list or category."
+        },
+        "outro": []
+    },
+    "demist": {
+        "state": "demist",
+        "menuName": "DEMIST",
+        "definition": {
+            "word": "demist",
+            "part": "verb",
+            "definition": "To remove condensed moisture from."
+        },
+        "outro": [
+            "WE'RE GOING",
+            "TO NEED A BIGGER",
+            "SQUEEGEE."
+        ]
+    },
+    "gist": {
+        "state": "gist",
+        "menuName": "GIST",
+        "definition": {
+            "word": "gist",
+            "part": "noun",
+            "definition": "The substance or essence of a speech or text."
+        },
+        "outro": {
+            "success": [
+                "YOU GET",
+                "THE IDEA."
+            ],
+            "failure": [
+                "I DON'T THINK",
+                "YOU QUITE GET IT."
+            ]
+        }
+    },
+    "heist": {
+        "state": "heist",
+        "menuName": "HEIST",
+        "definition": {
+            "word": "heist",
+            "part": "noun",
+            "definition": "A heist is a robbery or burglary, especially from an institution such as a bank or museum."
+        },
+        "outro": {
+            "died": [
+                "HEIST",
+                "GONE",
+                "WRONG."
+            ],
+            "escaped": [
+                "YOU GOT",
+                "AWAY WITH"
+            ]
+        }
+    },
+    "miniaturist": {
+        "state": "miniaturist",
+        "menuName": "MINIATURIST",
+        "definition": {
+            "word": "miniaturist",
+            "part": "noun",
+            "definition": "a person who makes, collects, or specializes in miniature objects."
+        },
+        "outro": [
+            "SO",
+            "SMALL."
+        ]
+    },
+    "nudist": {
+        "state": "nudist",
+        "menuName": "NUDIST",
+        "definition": {
+            "word": "nudist",
+            "part": "noun",
+            "definition": "A person who engages in the practice of going naked whereever possible."
+        },
+        "outro": [
+            "AT LEAST YOU",
+            "DIED NUDE."
+        ]
+    },
+    "narcissist": {
+        "state": "narcissist",
+        "menuName": "NARCISSIST",
+        "definition": {
+            "word": "narcissist",
+            "part": "noun",
+            "definition": "a person who has an excessive interest in or admiration of themselves."
+        },
+        "outro": [
+            "IF YOUR EMAIL",
+            "CLIENT DID NOT",
+            "OPEN AUTOMATICALLY",
+            "PLEASE EMAIL",
+            "PIPPIN.BARR",
+            "AT GMAIL.COM",
+            "TO EXPRESS YOUR",
+            "ADMIRATION FOR",
+            "MY WORK."
+        ]
+    },
+    "obstructionist": {
+        "state": "obstructionist",
+        "menuName": "OBSTRUCTIONIST",
+        "definition": {
+            "word": "obstructionist",
+            "part": "ADJECTIVE",
+            "definition": "intentionally trying to stop or slow down an official process."
+        },
+        "outro": [
+            "WATCH OUT",
+            "FOR THAT",
+            "WALL."
+        ]
+    },
+    "onanist": {
+        "state": "onanist",
+        "menuName": "ONANIST",
+        "definition": {
+            "word": "onanist",
+            "part": "NOUN",
+            "definition": "someone who practices coitus interruptus or masturbation."
+        },
+        "outro": [
+            "WAS IT GOOD",
+            "FOR YOU?"
+        ]
+    },
+    "persist": {
+        "state": "persist",
+        "menuName": "PERSIST",
+        "definition": {
+            "word": "persist",
+            "part": "verb",
+            "definition": "to continue to exist past the usual time, or to continue to do something in a determined way even when facing difficulties or opposition."
+        },
+        "outro": [
+            "AND YET IT",
+            "PERSISTED."
+        ]
+    },
+    "plenist": {
+        "state": "plenist",
+        "menuName": "PLENIST",
+        "definition": {
+            "word": "plenist",
+            "part": "noun",
+            "definition": "A believer in plenism; someone who believes that all space is full of matter."
+        },
+        "outro": [
+            "WHAT'S THE",
+            "MATTER?"
+        ]
+    },
+    "purist": {
+        "state": "purist",
+        "menuName": "PURIST",
+        "definition": {
+            "word": "purist",
+            "part": "noun",
+            "definition": "A person who insists on absolute adherence to traditional rules or structures, especially in language or style."
+        },
+        "outro": [
+            "THE OLD WAYS",
+            "ARE BEST."
+        ]
+    },
+    "sadist": {
+        "state": "sadist",
+        "menuName": "SADIST",
+        "definition": {
+            "word": "sadist",
+            "part": "noun",
+            "definition": "a person who derives pleasure, especially sexual gratification, from inflicting pain or humiliation on others."
+        },
+        "outro": [
+            "WHAT IS",
+            "WRONG",
+            "WITH YOU?"
+        ]
+    },
+    "tourist": {
+        "state": "tourist",
+        "menuName": "TOURIST",
+        "definition": {
+            "word": "tourist",
+            "part": "noun",
+            "definition": "a person who is traveling or visiting a place for pleasure."
+        },
+        "outro": [
+            "SEE %SITE%",
+            "AND DIE."
+        ]
+    },
+    "twist": {
+        "state": "twist",
+        "menuName": "TWIST",
+        "definition": {
+            "word": "twist",
+            "part": "verb",
+            "definition": "cause to rotate around something that remains stationary; turn."
+        },
+        "outro": [
+            "COME ON,",
+            "BABY."
+        ]
+    },
+    "typist": {
+        "state": "typist",
+        "menuName": "TYPIST",
+        "definition": {
+            "word": "typist",
+            "part": "noun",
+            "definition": "a person who is skilled in using a typewriter or computer keyboard, especially one who is employed for this purpose."
+        },
+        "outro": [
+            "REDRUM...",
+            "REDRUM..."
+        ]
+    }
+}

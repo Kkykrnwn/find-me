@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Ular URL!</title>
+<meta name=description content="Play the classic snake game on the browser URL."/>
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel=canonical href="/snake/">
+<link rel="shortcut icon" href=favicon.ico />
+<link rel=stylesheet href=style.css>
+<script>
+  if ('ontouchstart' in document.documentElement) {
+    document.documentElement.classList.add('touch')
+  }
+</script>
+</head>
+<noscript>⚠ Maaf, game ini membutuhkan JavaScript.</noscript>
+<div id=url-container class=invisible>URL: <span id=url></span></div>
+<div class=expandable>
+  <button class="help-toggle expand-btn" aria-label=Help>>bantuan<</button>
+  <div class="expandable-content hidden">
+    <span class=no-touch-only>Gunakan tombol panah atau <b>WASD</b> untuk mengontrol ular di URL.</span>
+    <span class=touch-only>Gunakan panah untuk mengontrol ular di URL.</span>
+    <a id=reveal-url href=#><br>Klik disini</a> jika Anda tidak dapat melihat URL halaman<span id=url-escaping-note class=invisible><br>atau jika terlihat berantakan <span id=replacement-char-description></span></span>.&nbsp;<button class=collapse-btn aria-label=Hide>〈</button>
+  </div>
+</div>
+<div id=max-score-container class="expandable hidden">
+  <button class="high-score-toggle expand-btn" aria-label="Max score">!</button>
+  <div class="expandable-content hidden">
+    Skor tertinggi Anda adalah <span id=max-score-points></span>!
+    <span id=max-score-grid></span><a id=share href=#><i class=icon-share></i>Bagikan</a>&nbsp;<button class=collapse-btn aria-label=Hide>〈</button><span id=share-note class=invisible></span>
+  </div>
+</div>
+<div class="controls touch-only">
+  <button id=up>▲&#xFE0E;</button>
+  <button id=left>◀&#xFE0E;</button>
+  <button id=down>▼&#xFE0E;</button>
+  <button id=right>▶&#xFE0E;</button>
+</div>
+<footer>
+  Made with (⠠⠇) by <a href=https://instagram.com/kky_krnwn331>@kiky kurniawan</a> |
+  <a href=https://tentang-saya-three.vercel.app>Me</a>
+</footer>
+<script src=snake.js></script>

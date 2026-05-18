@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ASCII Image</title>
+    <style type="text/css" media="all">
+      body {
+        background: #1e283b;
+        margin: 0;
+        padding: 0;
+      }
+      #div {
+        /*width: 720px;*/
+        display: inline-block;
+        color: white;
+        font-family: "Courier";
+        font-size: 8pt;
+        letter-spacing: 3.3pt;
+        line-height: 8pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <video style="display: none" id="video"></video>
+    <canvas
+      id="canvas"
+      style="display:block;margin: auto"
+      width="640px"
+      height="840px"
+    ></canvas>
+    <br />
+    <script src="func.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

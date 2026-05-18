@@ -1,0 +1,1801 @@
+# Ists
+
+Wherein I list over 1200 ists (list is an ist) and see what comes to mind. Might take a few rounds to get to every single one. These lists by length come, as you might imagine, from a [scrabble dictionary](https://scrabble.merriam.com/words/end-with/ist).
+
+## Four letters (because this is Scrabble)
+
+- cist
+    - Well, disgusting obviously. Can a Snake snake have a cist? You pop them. You don't eat them. They can indicate that you're not well or they can be benign. It's also not an ist in the sense of ism, and I don't want *too* many of those
+- fist
+    - **CANDIDATE** Snake as a punch? I do kind of like that. Feels like a reference to the desert boss in Mario Odyssey? Punch-Out hybrid? I think this could be pretty fun. An enemy made of walls with an apple... for an eye? That you need to punch. Yeah.
+    - This is admittedly not an ism-ist but on the other hand I could go all the way the other way with it I suppose... you *think* it's going to be a spiritual successor but then it isn't? Or just a blend. We'll have to see... there's an issue of comedy here, not quite timing but... something else... proportion...
+- gist
+    - You get the idea. This seems very vague. "the substance or essence of a speech or text." (via Google).
+    - **CANDIDATE** Perhaps there's a way to simplify Snake even more so you just "get the gist" or it? That's not terrible
+- hist
+    - No idea what this means. "used to attract attention or call for silence." Archaic. Sure is. I think it's archaism (ahaha) probably disqualifies it. 
+    - **DESIGN IDEA** Though this does raise the spectre of definitions somewhere in the chain of play?
+- kist
+    - Uh? "a chest used for storing clothes and linen." Scottish apparently. Hard to imagine using it.
+- list
+    - **CANDIDATE**  I know what a list is! I like the idea of a "list of snakes"? It could be like a horizontal-only version of the Tux and Fanny Snake game? It seems like vertical movement would be impossible though? Might be logistically wrong, even if a list of snakes is a very cool idea. Worth a prototype.
+- mist
+    - **CANDIDATE** This one screams fog of war to me, an easy yes for prototyping.
+- wist
+    - Archaic. "have knowledge." Down with archaisms.
+
+## Five letters
+
+- agist
+    - "take in and feed (livestock) for payment."
+    - So that would be a no. (Not to be confused with ageist I guess.)
+- **CANDIDATE** alist
+    - "Alist means leaning or tilted to the side."
+    - Well that's some low hanging fruit in the sense of perhaps just rotating the canvas?
+    - Though to be fair it's a "rare nautical term" which doesn't strike me as a huge recommendation. So the fruit it low but is it good fruit?
+- **CANDIDATE** deist
+    - Well I at least know this word. (Quickly looks it up having lost his faith in his vocabulary... yep.)
+    - Not too clear what it would mean for the snake to believe in a god? Oh I see it's a bit more specific:
+    - "A deist is someone who believes in a God who created the universe but does not intervene in its affairs or in human lives, relying on reason and natural laws rather than revelation or religious authority"
+    - So a non interventionist god... it's more just how you believe the world came to be and so on, not about how you act? That being the case could we imagine a game where the snake is a deist? How would you communicate that? There's the obvious idea it would drive itself around... or the also obvious idea that there are no controls and so it just smacks into the wall?
+- exist
+    - Seems like a tough one. It's such a mega concept I can't imagine it fitting the specifics of a game?
+- **CANDIDATE** feist
+    - Not just a singer apparently... ""Feist" refers to a small, often ill-tempered, mongrel dog, particularly in the South Midland and Southern U.S."... okay.
+    - A snake that barks? I'm not seeing it. Alternatively a game that sings Feist's main song to the rhythm of the movement? 1 2 3 4 Tell me that you love me more...
+    - Now that is actually pretty funny
+- **CANDIDATE** foist
+    - You "foist something off on someone" right? "impose an unwelcome or unnecessary person or thing on" ... hmmm. So you could imagine another snake being "foisted" on our snake, making their life harder?
+    - Foist is such a weird word though... it doesn't have that *click* into place I would like, but it's true it could be expressed like that, so let's at least list it
+- grist
+    - Grist for the mill. So it has a metaphorical function as well as a literal one. e.g
+    - 1. grain that is ground to make flour.
+    - 2. useful material, especially to back up an argument.
+    - Neither of these make a huge ton of sense to me... could you be grinding the apple down over time into smaller and smaller pieces? 
+    - And then what? Bake an apple bread? Seems far fetched.
+- **CANDIDATE** heist
+    - Just because heists are so game-like it would be fun to at least try to do this? Snake "breaks into" somewhere (how?? Eats the apple door?) Then in a confined space eats a bunch of green apples (money???) and then escapes... somehow? And little police walls come to chase you with sirens blaring???
+- hoist
+    - As in on your own petard? Could your body be made of apples? I feel like this is probably way too unclear to bother with.
+- joist
+    - What is a joist? It's some sort of support structure right?
+    - "A length of timber or steel supporting part of the structure of a building, typically arrange in parallel series ot support a floor or ceiling"
+    - I mean you could image a snake where you eat enough to become a successful joist but... that is kind of terrible? I think not.
+- maist
+    - Scots for "most", definitely not
+- **CANDIDATE** moist
+    - I mean, it would be great to have a moist snake... disgusting...
+    - Slightly wet, damp...
+    - The snake could just leave a pale blue trail? That evaporates?
+    - Doesn't really impact anything though? Purely cosmetic? Do we mind purely cosmestic things? (This is raising a general question about the language of design here right - visuals, time, movement, death, growth, elements, ...)
+- neist
+    - Scots for nest, a lot of Scots in here
+    - Not of interest, though maybe one could make an entire game based on a different language? Serpents?
+- **CANDIDATE** odist
+    - A writer of Odes right? Is there anything to that? Could a snake write an ode? Choose lines of poetry by eating them? Or words? At the end it displays a resulting poem that also needs to be a poem?
+    - Just reveals a poem by eating? Though your growing body would then block the resulting poetry?
+    - Feels awkward?
+- shist
+    - An uncommon spelling of a type of layered rock? Thinly layered.
+    - Is there anything there? A 3D rotation of the board where you can see layers? But who actually cares? And who knows "shist". I don't give a shist.
+- **CANDIDATE** twist
+    - Well this feels like it should be something. You can *twist* the tiles of the world (as in *alist* but with a more recognizable word)
+    - There's also the idea that the game is a collection of Snakes with a Twist, which isn't bad either
+    - Could the twist of tiles be sort of progressive/dependent? Twisting normally seems painful? Well you also "do the twist" in a good way?
+    - Anyway worth thinking about further
+- waist
+    - Well we all have one. Does a snake have a waist? Is a snake all waist?
+    - Is there anything to be done about this in a videogame?
+- whist
+    - Isn't that a card game?
+    - Yeah it's a pairs (of people) based trick taking game
+    - I suppose it therefore has a specific game structure but I don't see a good way to jump from multiplayer card game to snake? Four snakes? Doing what? Taking tricks? I mean... come on man...
+- wrist
+    - A part of the body
+    - A flick of the wrist
+    - Snakes don't have wrists
+
+## Six letters
+
+- ageist
+    - An ageist is someone who discriminates based on age right? 
+    - Hard to imagine the snake being ageist, but I suppose the game could be somehow... if the snake aged. Could the snake age? Get... greyer? Paler? And then the game... doesn't... I'm struggling with this
+    - It honestly seems like you could do something, but right now it feels like I'm reaching rather than seeing
+- aorist
+    - "an unqualified past tense of a verb without reference to duration or completion of the action."
+    - Well that would be a no...
+    - Unless you do something with time in Snake, which is a very time-oriented tick-tock kind of game; but it's such an alien word and I'd rather avoid making too many things that you'd have to read a definition for
+- **CANDIDATE** artist
+    - "a person who produces paintings or drawings as a profession or hobby."
+    - Uh yeah. Most obviously you could just leave a trail. Could do apple as paint, snake as brush, and thus have a limited paint-time before you run out?
+    - What is death when you're an artist? Would we want any commentary on the "starving artist" here? Living on paint
+    - Anyway, it's for sure one to try out
+- assist
+    - "help (someone), typically by doing a share of the work."
+    - It's actually tricky to think about how the snake could help someone else (most obviously another snake?) or how someone else could help the snake?
+    - Snake is a pretty selfish world on the face of it? I do quite like the idea of help in here, but not seeing a quick way in...
+    - The idea of the sports-based assist is interesting too but again assumes teamwork...
+- audist
+    - Discriminating against people who are deaf or hard of hearing
+    - The original Snake doesn't really have a strong audio presence in terms of how you play it, so what would this do?
+    - It's also super negative of course... like I guess the game could whisper mean things? Or it could whisper secrets about the level so only people who hear well could get them??? <- That's quite funny but also literally audism... it's hard not to feel that a design exercise that works hard to discriminate against someone is not a very good idea? Unclear? I don't know. For now, nah.
+- aurist
+    - "a physician specializing in the treatment of ear diseases"
+    - Not feeling it
+- autist
+    - Person with autism... noooot something I want to wade into with a videogame
+- bemist
+    - "The meaning of BEMIST is to envelop, involve, or obscure in or as if in mist"
+    - No real distinction from "mist"
+- **POOR CANDIDATE** cubist
+    - "A cubist artist creates art in a style that depicts objects or people as geometric shapes, often showing multiple perspectives simultaneously, and breaking down subjects into fragments"
+    - I mean this is hilariously descriptive of Snake in the sense of fragmentation (snake body is segments in the code) and geometry (snake body is a series of rectangles)
+    - Which means it's actually NOT easy to do?
+    - But perhaps the "multiple perspective simultaneously" could have something to it? Being able to see the snake's face would be hilarious? Just that? Haha. 
+- cueist
+    - "a person skilled in cue sports; a snooker, billiards, or pool player"
+    - So... no
+- **CANDIDATE** delist
+    - "remove from a list or category."
+    - I like that somehow... it's very abstract... I mean is there some way that ... oohhhh wait! You select delist, the snake eats it (because that's how the menu works) and then just reappears at the menu because it ATE the menu item, delisting it HAHAHAHAHA
+- **CANDIDATE** demist
+    - "to remove condensed moisture from : defog. demist a car's windows"
+    - Low hanging fruit is that your snake clear mist with body... maybe you can blurrily see the stuff through it (how to blur?) and then you clear it, but it builds back up over time... don't hate it... weird to have mist and demist but hey
+- desist
+    - cease; abstain
+    - Hmmm. It's very negative. How does a snake desist? It just doesn't move?
+    - It sounds kind of boring and nihilist(ic).
+    - Yeah I can't immediately think of it
+- **CANDIDATE** egoist
+    - "An egoist is a person who is preoccupied with their own interests and needs, often to the point of being selfish and self-centered"
+    - Yeah it's another one where it's just what Snake (and many videogames) is like. Which... there's humour to a bunch of these just being Snake and the point is just "snake is, itself, egoistic"... but can't just do that over and over again... but maybe it's funny more than once, I dunno...
+    - A hard maybe
+- enlist
+    - "enroll or be enrolled in the armed services."
+    - "engage (a person or their help or support)."
+    - I dunno... not seeing it right away
+- holist
+    - "characterized by the belief that the parts of something are interconnected and can be explained only by reference to the whole"
+    - Already did HOLISM, so I don't think I want a repeat
+- insist
+    - "demand something forcefully, not accepting refusal."
+    - Don't think I see it? Though I do have to think more broadly than literally "just" the existing mechanics? If there's a funny way to add something simple...
+    - But not necessarily in this case
+- **CANDIDATE** jurist
+    - "an expert in or writer on law"
+    - Law quiz? A quiz at some point could work... choosing apples as answers...
+    - What law? The laws of Snake? Are those laws? It's not really the kind of law meant by jurist.
+    - Worth a thought. International law maybe? Snake laws? Haha. Maybe.
+- legist
+    - Kind of the same as jurist, so nah
+- lutist
+    - There's only so many instrument ones I can do and this isn't my fav
+- lyrist
+    - Same
+- monist
+    - Did it in SNAKISMS I believe
+- **CANDIDATE** nudist
+    - "a person who engages in the practice of going naked wherever possible."
+    - A snake that is naked. Is the snake already naked? Are snakes naked? Yes right?
+    - Snake shedding its skin is... more naked than a snake that has not?
+    - This is awkward... but I would quite like to crack it so on the candidates list it goes
+- oboist
+    - Noboe.
+- **CANDIDATE** purist
+    - "a person who insists on absolute adherence to traditional rules or structures, especially in language or style."
+    - This was the one I was going to have as "just snake"
+    - I think it's pretty strong.
+- racist
+    - Rather not
+- rapist
+    - Definitely not
+- relist
+    - Feel like List and Delist is enough listing?
+    - Also what would this even be?
+- **CANDIDATE** resist
+    - "withstand the action or effect of."
+    - Feels like there are possibilities there right?
+    - The snake could resist the wall. The snake could resist the player's input.
+    - The snake could resist its own movement. Etc. There seem to be possibilties. Worth a try.
+- rudist
+    - "a cone-shaped extinct bivalve mollusk that formed colonies resembling reefs in the Cretaceous period."
+    - That would be a no
+- **CANDIDATE** sadist
+    - "a person who derives pleasure, especially sexual gratification, from inflicting pain or humiliation on others."
+    - NICE. I mean... not nice. Why did I immediately write NICE?
+    - Anyway the player would be the sadist right? How? We encourage them to be by scoring points for killing the snake, not for eating the apple. Smash them against the wall, themselves, over and over, for points. GAME OVER if you let them eat the apple?
+- saxist
+    - I GET IT, musicians can be called -ist names. But which one?
+- schist
+    - a coarse-grained metamorphic rock which consists of layers of different minerals and can be split into thin irregular plates.
+    - I doubt it... a layered version of snake somehow? But it's just not that funny because rock types aren't all that amusing...
+- sexist
+    - No thanks
+- tanist
+    - "the heir apparent to a Celtic chief, typically the most vigorous adult of his kin, elected during the chief's lifetime"
+    - No
+- theist
+    - "a person who believes in the existence of a god or gods, specifically of a creator who intervenes in the universe."
+    - I kiiind of like it but I don't really see it unlike deist...
+- **CANDIDATE** tubist
+    - This was the musical one I actually thought would be funny
+    - Specifically have a tuba rhythm with slow slow slow slow slow slow bombombombom rhythm be how the snake moves, so you have to get used to the idea of moving slow and fast to a specific setup
+- **CANDIDATE** typist
+    - Surely...
+    - I mean yeah, why not have a typing one. Clacking keyboard sounds. But how does movement work? Most obviously a key per tick but how do you choose directions? Just automated and you're just the tick in some sense?
+    - Won't work on mobile? Or will it?? Amazing if it sort of did, even poorly...
+- verist
+    - "A "verist" refers to someone who creates art or literature characterized by a strong emphasis on extreme truth and reality, often representing everyday life and potentially including unpleasant or unflattering aspects"
+    - Feels a bit specific somehow... not that workable... that harsh realities of a snake eating apples?
+- vibist
+    - "a musician who plays the vibraphone."
+    - And not someone who is an expert at feeling the vibes (well kinda)
+    - So no.
+
+## Seven letters
+
+- ableist
+    - I would rather not
+- agonist
+    - "a substance which initiates a physiological response when combined with a receptor."
+    - Kind of like the physicality of this but it's pretty general and so a bit hard to think about... what is a "physiological response"? Well I mean I guess this is YET ANOTHER one of these that you could argue is just... Snake???
+    - As in, the apple is an Agonist in this case?
+    - In which case would you make a version where you play as the apple? You are the agonist? 
+    - It's also just a really abstract definition though... maybe not fun enough?
+- altoist
+    - Music music
+- amorist
+    - "a person who is in love or who writes about love."
+    - That's quite appealing but I don't immediately get anyway... can the Snake be in love? Can the Snake world support love? What is love? Baby don't hurt me? Don't hurt me? No more?
+- **CANDIDATE** animist
+    - "the attribution of a soul to plants, inanimate objects, and natural phenomena." -- well that's animism and an animist beleives in these things
+    - So can the Snake be an animist? The player? Would it matter?
+    - Would the idea be to represent a soul? Should the apple's soul leave its body each time you eat it, and the snake's too? That's kind of funny?
+- atavist
+    - "recurrence in an organism of a trait or character typical of an ancestral form and usually due to genetic recombination."
+    - Uh... that sounds complex...
+- atheist
+    - "a person who disbelieves or lacks belief in the existence of God or gods."
+    - How would a Snake prove they don't believe in God? It's a funny thing to try to imagine... but I dunno, it's like an absence.
+    - You could imagine something stupid like an end line saying something like "When you're dead your dead" but can't rely too much on that idea of just a text that makes a joke in the context of the vanilla game.
+    - So... no for now. Sad.
+    - #interesting
+- atomist
+    - "Atomism is a natural philosophy rooted in ancient Greece that states the universe is made up of indestructible particles known as atoms"
+    - I *think* I made an Atomism in SNAKISMS? Or maybe not actually. And didn't I already run into this concept earlier on? The funny idea that Snake *is* made up of these atomic tiles? And is that something one can care about?
+    - I mean there are pixels too. But how does one *show* this. And in particular because it is ISTS how do you show someone believe in that principle?
+    - Gosh I don't know... do I need another tag for things that are interesting but kind of hard? 
+    - #interesting
+- baptist
+    - "relating to or belonging to a Protestant Christian denomination that advocates baptism only of adult believers by total immersion."
+    - I confess I'm a bit confused about whether this whole thing hangs on how much of your body you put in the water? Or is that merely symbolic and it's about some claiming of a high ground of more metaphorical immersion?
+    - Regardless I'm a wee bit unsure of how one might do this in Snake... I guess you could set the game underwater... total immersion... I mean that's *funny*, but not totally clear what the fuck it would mean
+    - Maybe deserves more thought though
+    - #interesting
+- bassist
+    - Music
+- biblist
+    - "a person who regards the Bible as the only rule of faith." (or Biblicist if you like more letters)
+    - Bit of a big area of discussion... I mean the snake could poop out bible quotes or something but I don't know that I find that very compelling
+- bundist
+    - Bundism: "A secular socialist ideology and movement among Ashkenazi Jews that advocated non-separatist Jewish autonomism, the cultivation of Ashkenazi culture and worker organisation." ... so a person into that then
+    - And also: uh no
+- cambist
+    - " One who deals in bills of exchange or who is skilled in the science and practice of exchange. "
+    - Christ. 
+    - "Cambist is an antiquated term that refers to a financial professional who is considered an expert in the international currency exchange markets."
+    - I mean part of me almost wants to think about how to achieve this, though the word itself feels so obscure and I don't reeeeaally want (too many) hyper obscure words in the game as it seems a bit prickly.
+- casuist
+    - "a person who uses clever but unsound reasoning, especially in relation to moral questions; a sophist."
+    - Fun guy. Dunno about this for the game. It's a little bit of "feeling seen" in terms of the game itself though! Trying to be clever about design relative to words but secretly it's a bit rotten and bullshit under the hood
+- cellist
+    - Music.
+- chemist
+    - "an expert in chemistry; a person engaged in chemical research or experiments"
+    - Well I must say I would *like* to be able to include this one.
+    - But also I dunno how... could the Snake do some chemical research on the apple? UMMMMM. Can...
+    - I dunno.
+- chutist
+    - Aka a "parachutist" which... well that's appealing. 
+    - The Snake on a parachute? The apples dropping down on parachutes?
+    - I'd think there was something to this?
+    - See also: parachutist, if I ever get that far
+    - I don't have anything design-y immediately though so is this only
+    - #interesting
+    - ?
+- chymist
+    - "a graduated scientist trained in the study of chemistry, or an officially enrolled student in the field."
+    - Oh sure. Words. See: chemist.
+- cladist
+    - "A biologist who studies clades, an evolutionary biologist who studies the pattern of species interrelationships according to the principles of cladistics."
+    - ummmmm...
+    - cladistics: "An approach to biological systematics in which organisms are grouped based upon synapomorphies (shared derived characteristics) only, and not upon symplesiomorphies (shared ancestral characteristics)"
+    - Ummmmm....
+    - So... no...
+- **CANDIDATE** coexist
+    - Oh well I like that idea! Though the fuck it would mean I don't know.
+    - Two snakes I suppose. Maybe a "no after you" situation where you need to keep them alive? 
+    - Or simply... control them both? And they both coexist? Probably yeah.
+- consist
+    - It's a nice simple word but I can't really imagine a game out of it.
+- **CANDIDATE** copyist
+    - "a person who makes copies, especially of handwritten documents or music."
+    - Oh that's very appealing. A person who makes copies. Potentially of themselves? Or the apple? Something can get copied.
+- **CANDIDATE** cosmist
+    - "A "cosmist" refers to someone who adheres to or supports the philosophical and cultural movement of Russian cosmism, which explores the origin, evolution, and future of the cosmos and humankind, often with a focus on the potential for humanity to actively shape its own destiny and the universe"
+    - Thanks "AI overview"
+    - A bit tough to understand without reading into Cosmism I guess
+    - "Russian cosmism (Русский космизм), also cosmism, is a philosophical and cultural movement that emerged in late 19th- and early 20th-century Russia, integrating science, religion, and metaphysics into a unified worldview. It is characterized by the belief in humanity’s cosmic destiny, the potential for immortality, and the use of scientific and technological advancements to achieve control over nature and space exploration.[1]"
+    - Thanks Wikipedia...
+    - I mean it's pretty fun to think about the Cosmic destiny of the Snake... but less clear how we might represent that... immortality, control over nature, space exploration... considered as "stages" there might be something there? Like you collect apples to upgrade; first you get "immortality"? So walls no longer do anything (have admittedly already done that in SNAKISMS); then control over nature means you can maybe spawn an apple any time? Change the length of your body? (Mobile controls for this sound almost impossible) Then you can go to Space... maybe a starfield appears and you head up out of the screen to end the game?
+    - It's VERY GAME-y but maybe there is something there
+- cultist
+    - Well I really WANT THIS TO WORK of course
+    - "a member of an unorthodox cult who generally lives outside of conventional society under the direction of a charismatic leader."
+    - I guess the Snake would need to be the Cultist? Or could the Snake be the Charismatic leader? And the unorthodox cult is about moving the Snake's body around to eat apples... ummm... that is VERY underdeveloped but I feel like it's worth trying more with it
+    - The big question is going to be "who is the cultist" and realistically that needs to be the Snake or the Player (who are a little bit the same person normally) as they're the only true "agents" unless I want to introduce agency to a wall or something (with pugilist would do... or whatever the boxing one is...)
+    - A DEATH CULT is potentially quite interesting... it's a bit too similar to something in SNAKISMS though I suppose? But maybe if it's about pursuading the player to die instead of play? And then if they die... they are rewarded? Or they are NOT rewarded because cults are nonsense?
+    - This needs to be pursued
+    - #interesting
+- cyclist
+    - I mean, clearly a snake on a bike is pretty fucking funny, but would would it mean in practice? Can't really depict a bike...
+    - I guess I can get away with *one* really stupid thing where I put (for example) a bike emoji under the snake and that's the whole stupid joke. One of those, but you'd want to choose carefully which one is the funniest way of doing that... because it's a meta joke about design
+    - The Snake needing to signal turns would be funny, or follow road rules
+    - Maybe the screen layout becomes more of a city streets and so on? But that could also be "motorist" or something... not really just about a bike
+    - But there's something to this?
+    - The idea of balance and bikes? But a standard cyclist has mastered balance.
+    - Let's just call it #interesting for now
+- czarist
+    - "autocratic; dictatorial. noun. an adherent of a czar or of czarism."
+    - "a supporter of the system of government of Russia until 1917 by a male Russian ruler. The czarists sent political dissidents off to Siberia."
+    - Haha so specifically Russian in the second one
+    - "Russian Music" and a color scheme or WHATEVER? And you get deposed? No because a czarist isn't the czar.
+    - "of, pertaining to, or characteristic of a czar or the system and principles of government under a czar."
+    - So there's the autocratic element here... like the game itself could be czarist ... which all games "are" in "that way"
+    - Feel like I'm not really finding something right now. Or that a different word might unlock the ideas I'm circling better?
+    - For now it has generated enough bullets that it is #interesting
+- **CANDIDATE** dadaist
+    - Ohhhhh! "A "dadaist" refers to someone associated with or influenced by Dadaism, a radical art movement that emerged in the early 20th century, characterized by its anti-art, anti-war, and absurdist approach to art and culture"
+    - So a chance to refer to the art movement or even specific famous works, particularly because I feel like they were quite performative
+    - Snake as Nonsense in some capacity...
+    - "Within the umbrella of the movement, people used a wide variety of artistic forms to protest the logic, reason, and aestheticism of modern capitalism and modern war"
+    - So the Snake could be a Dadaist?
+    - "To develop their protest, artists tended to make use of nonsense, irrationality, and an anti-bourgeois sensibility.[6][7][8] The art of the movement began primarily as performance[9] art"
+    - "According to Hans Richter Dada was not art: it was "anti-art".[22] Dada represented the opposite of everything which art stood for. Where art was concerned with traditional aesthetics, Dada ignored aesthetics. If art was to appeal to sensibilities, Dada was intended to offend."
+    - I mean there seems to be a line toward a Snake that is like an anti-Snake, opposing/resisting/making nonsense of the rationality and capitalistic and individualistic basis of the game Snake?
+    - Apparently Fountain counts as Dada? So could be funny to just present a JPEG of something, a Snake or an anti-Snake?
+    - L.H.O.O.Q. is another one in that vein... a "defaced" work, 
+    - I mean there's the stupid way out where the Snake has a moustache, but that would very much NOT be the Dadaist principle at work, even though it's funny and puncturing
+    - "DADA!! the latest thing!!! bourgeois syncope, BRUITIST [noise] music, the new rage, Tzara song dance protest — the bass drum — red light, policemen — songs cubist tableaux postcards Cabaret Voltaire song — simultaneous poem … two-step alcohol advertisement smoking toward the bells / we whisper: arrogance / Ms. Hennings’ silence, Janco declaration. transatlantic art = people rejoice star projected on Cubist dance in bells.
+        - Tristan Tzara, “Chronique Zurichoise,” entry for 26 February 1916, in Richard Huelsenbeck, ed., Dada Almanach (Berlin, 1920), p. 11."
+        - via [https://smarthistory.org/dada-performance/](https://smarthistory.org/dada-performance/)
+    - The idea of "distorted beyond all recognition"
+    - "Perhaps Hugo Ball put it best when he said, “Our cabaret is a gesture. Every word that is spoken and sung here says at least one thing: that this humiliating age has not succeeded in winning our respect.”"
+    - I mean it's VERY INTERESTING it has to be a candidate
+- dentist
+    - Dentist hahaha. I mean could you be removing cavities in some teeth made of walls? Is that too stupid? Maybe yes...
+- dialist
+    - "a person who makes (sun) dials"
+    - Language never ceases to surprise I suppose - why the sweet fuck did we need that word?
+- **CANDIDATE** diarist
+    - Ooohhhh! The personal diaries of the snakeeeee! FUCK ME.
+    - "a person who writes a diary." - well yes
+    - The snake poops out a trail of diary entries about its life?
+    - The snake pauses after every apple to write in its diary? Or prompts the player to type (including mobile keyboard) about their feelings?
+    - Got to be something here.
+- dualist
+    - "Dualism is the theory that the mental and the physical – or mind and body or mind and brain – are, in some sense, radically different kinds of things"
+    - Descartes and all that
+    - Did I do this in SNAKISMS? I did and it's funny!!! Hmm, so then no.
+- **CANDIDATE** duelist
+    - "A person who participates in a duel."
+    - Another Snake with whom you are Dueling? No apple? Essentially it's the TRON lightcycles game? Basically impossible to program a good AI for this without losing my mind?
+    - Worth at least a prototyping consideration
+- egotist
+    - See: egoist
+- **CANDIDATE** elegist
+    - "the author of a mournful poem lamenting the dead."
+    - I mean FUCK YES the player should write an elegy when the Snake dies
+    - But what's a good way to get that to properly land?
+    - Maybe it creates a downloadable PDF/image of the elegy nicely laid out?
+    - How to encourage good elegaic behaviour?
+- **CANDIDATE** elitist
+    - "a person who believes that a society or system should be led by an elite."
+    - Hmmm, maybe the game could quiz you about whether you're GOOD ENOUGH to control the snake and play? Qualifications check? How would we ask for proof? A quiz about your depth of Snake knowledge. Could actually get into a pretty fun and stupid gamerbro gamergate mockery session actually...
+- entwist
+    ""Entwist" means to twist together or around, or to make into a twist. It is a transitive verb, similar in meaning to "entwine""
+    - I mean basically the same thing as "twist", and twist is a more common word so let's not bother
+- **CANDIDATE** epeeist
+    - Someone who uses an epee? It feels a bit too archaic or off beat to bother with, but snake sword fighting IS actually kind of a cool and weird idea? I guess you would have to epee them in the face? Otherwise too disadvantageous to turn at all and you'd always just get a double hit?
+    - It's sufficiently weird I kind of at least want to entertain trying it, even as I don't really love the word "epeeist" because it just looks dumb. I wonder if there are other swordy words? Swordist? So much better.
+- etatist
+    - "a supporter of a policy of complete control by the state (= a country's government) over its citizens and over the economy"
+    - Fun. I think there are probably better words like fascist for this. Etatist just seems too weird and anyway I don't immediately think of a design.
+- **CANDIDATE** faddist
+    - "a person who becomes very interested or enthusiastic about different things for a short time : a person who becomes involved in fads"
+    - Quite fun, but what would that mean in a game? I like the idea of a faddish Snake switching between different popular game tropes perhaps? Loot boxes, currencies, cosiness, and others... like it cycles between different (easily implementable?) trope-y kinds of stuff? A way of having a semi-history of design ideas... except that sounds like a lot of work...
+    - I don't want to rule it out because it seems to have a fun kind of vibe
+- fascist
+    - I WANT this to work
+    - Intriguing that looking for a definition immediately gets you into "this is hard to define"
+    - Very relevant to the current moment
+    - "Many experts agree that fascism is a mass political movement that emphasizes extreme nationalism, militarism, and the supremacy of the nation over the individual. This model of government stands in contrast to liberal democracies that support individual rights, competitive elections, and political dissent." [https://education.cfr.org/learn/reading/what-fascism](https://education.cfr.org/learn/reading/what-fascism)
+    - Also they note a thread of traditionalism/conservatism as part of it
+    - What would a fascist Snake mean?
+    - COuld it be that a simplistic videogame from Nokia phones is not ready to rise to the challenge of representing fascist thought?
+    - I got kind of nothing. I guess you could go down a line of "are videogames kind of fascist anyway?" Though they are highly individualistic...
+    - Fascism feels like it requires a pretty complex existing society and political context to respond/react to? Which Snake... doesn't have?
+- faunist
+    - Specialing in Fauna. No.
+- fauvist
+    - "Fauvism, meaning "wild beasts" in French, is a style of painting and an art movement that emerged in France around 1905, characterized by bold, vibrant colors, and a non-naturalistic approach to form"
+    - Well Snake is already ticking the "non-naturalistic approach to form". Could be a fun thing to do a crazy palette swap kind of a thing, maybe with reference to a specific work?
+    - Matisse as a founder which is intriguing. Hmmm. I mean there's this continuing idea of art movements Snake as a separate idea, so maybe this is not the place.
+- feudist
+    - "a specialist in feudal law", so no
+- fideist
+    - "the doctrine that knowledge depends on faith or revelation"
+    - Hmmm. It's such a weird word. 
+    - "Fideism is a standpoint or an epistemological theory which maintains that faith is independent of reason, or that reason and faith are hostile to each other"
+    - So a faith-based Snake game which... I dunno, I like the idea, but the main gag of kind of "having faith" in some way feels like I already did at least one version in SNAKISMS around the control of the dualism snake with your mind?
+    - I guess you could have faith about a wall and go through it? Maybe like existentialism with the apple on the outside but you have faith and go through the wall? Faith overcoming the rational view of the walls in the game?
+    - But that word...
+- florist
+    - Oh that's really sweet. I wonder if a flowery snake can make sense.
+    - "a person who sells and arranges plants and cut flowers"
+    - Specifically about the commercial end, so not about planting or caring for flowers but about arranging/organizing them for sale... which is maybe a bit harder...
+    - You could create a kind of job-simulator where there are different flowers (apples) on screen and you have to gather a nice bouquet which is somehow shown on screen...
+    - Feels like a bit of a reach though
+- flutist
+    - Yeah music
+- foilist
+    - Another sword, not a better word
+- fuguist
+    - "A musician who composes or performs fugues."
+    - Pretty specific. I don't hate musical elements but it doesn't feel like a fugue does more or less than just leaning into tuba or whatever
+- gnomist
+    - "a writer of pithy sayings"
+    - HUH! I feel like I have heard "gnomic" and associate it with this a bit but never really knew this
+    - Hard to imagine this working.
+- harpist
+    - Music
+- hornist
+    - Music
+- hygeist
+    - Just another word for a hygienist, which is a good word, but let's revisit with the more common term
+- hymnist
+    - A *writer* of hymns. Gets back to odists etc.
+- idylist
+    - More writing of poetry/music. It's a whole thing
+- **CANDIDATE** imagist
+    - "An "imagist" is a poet or writer who adheres to or advocates for the poetic movement of Imagism, which emphasizes clear, concise language and the precise presentation of images to convey ideas and emotions"
+    - So this one is a writing movement/form... goes with the idea of art movements as well
+    - Could imagine a textual version? "The Snake Approached The Apple" etc.? That's quite an intriguing thought. I don't know if this is the right vehicle, perhaps there'll be another that could use that technique, but I do like the idea of a words-only telling of snake...
+- intwist
+    - Twist together or around, but a weird word
+- ironist
+    - A person who uses irony.
+    - Hmmm, an ironic snake is pretty good as just a core concept. "the expression of one's meaning by using language that normally signifies the opposite, typically for humorous or emphatic effect."
+    - Hmmm. There's not so much language in Snake that this would work at a linguistic level... but can gameplay itself be ironic? The language of play as ironic? It's a bit tantalising, but I can't really immediately see it... #remember
+- judoist
+    - How would a snake do judo?
+- jujuist
+    - "an art of weaponless fighting employing holds, throws, and paralyzing blows to subdue or disable an opponent" ... huh... never heard of it, I suppose it's jujitsu? Sure... but also I can't imagine it really...
+- leftist
+    - Oh this seems like it would be fun? A parody of the right wing parody of the left wing?
+    - "a person with left-wing political views."
+    - "Generally, the left wing is characterized by an emphasis on "ideas such as freedom, equality, fraternity, rights, progress, reform and internationalism" while the right wing is characterized by an emphasis on "notions such as authority, hierarchy, order, duty, tradition, reaction and nationalism""
+    - What would that actually translate into? Is Snake inherently right wing? We got at this earlier with "fascist" in a similar way... is there a way to make a reactionary Snake that's the leftist version of fascist snake?
+    - Apples for all? A community of snakes? No fighting and dying?
+    - Actually a bit tough though
+- lookist
+    - Discrimination...
+    - Hmm.
+- metrist
+    - "A maker of versus" but I've never heard it before
+- midlist
+    - "In the publishing industry, "midlist" refers to books that fall between bestsellers and lesser-known titles, generating moderate sales and receiving less marketing than frontlist titles"
+    - Ha! But hard to envision this. pretty funny word though.
+- narcist
+     - Short "narcissist". Already did a narcissism.
+- oculist
+    - Eye person. I support you could make it blurry! And then offer connections while you're trying to play? Pretty funny. Which is better? A? or B? A? or B? hehehe. As a glasses wearer that's fun.
+    - "optometrist" is the better word though. I'll candidate it.
+- ologist
+    - A specialist. Too weird.
+- **CANDIDATE** onanist
+    - Oohhhhh yeah. Masturbation baby.
+    - Moving the snake back and forth like a penis? Yes please?
+    - "noun. someone who practices coitus interruptus or masturbation: A confirmed onanist, or chronic masturbator, she saw no need for a relationship with someone other than herself."
+    - There has GOT to be a way to masturbate a snake. I only need to find it. That is my mission in life.
+- oralist
+    - "relating to or advocating oralism."?
+    - "the system of teaching deaf people to communicate by the use of speech and lip-reading rather than sign language."
+    - Alright. Don't see it.
+- **CANDIDATE** palmist
+    - "a person who practices palmistry; a palm-reader."
+    - That strikes me as fun? Following the lines on a palm? We have the book. Worth a try?
+- pannist
+    - "a person who plays a pan in a steel band."
+    - Oh... sure...
+- **CANDIDATE** persist
+    - I like this one. Maybe the idea of inviting them to persist? Keep going! Don't give up! And no option to quite?
+- pianist
+    - I mean who doesn't love a piano? Eat apples to play a song? That scene in Big?
+    - This (or "guitarist") seems obvious as a way to have the player directly play music through a snake-based interface. Violinist would do that too though actually.... just noise or something else?
+    - Maybe true that guitarist/violinist are better fits though? I'll candidate violinist as the clearist one.
+- pietist
+    - "pious sentiment, especially of an exaggerated or affected nature."
+    - I like the idea, but weird word
+- **CANDIDATE** plenist
+    - "A believer in plenism; someone who believes that all space is full of matter."
+    - I mean you can imagine the joke... walls everywhere or something... but plenist feels like an inaccessible word? But maybe it's worth it, instant death, it's an easy one to do
+- pollist
+    - Advocacy for polls
+    - I mean, that *is* funny and some sort of multiple choice thing is pretty good
+    - Actually just the general thing of TYPING is a pretty funny one... you could probably lay out QWERT or just an alphabetical thing of letters and have eat-to-type for instance
+    - Though that's separate, though maybe that's TYPIST?
+- poloist
+    - Polo is a no
+- **CANDIDATE** protist
+    - "a single-celled organism of the kingdom Protista, such as a protozoan or simple alga."
+    - A single celled snake is pretty funny... just the head going around? But... pretty basic? But... maybe that's cool? Could read more about them...
+- querist
+    - "a person who asks questions; a questioner."
+    - Good thing but the word doesn't gel
+- realist
+    - Mmm, I like this word.
+    - "1. a person who accepts a situation as it is and is prepared to deal with it accordingly. "I am a realist, with no time for your world of make believe" 2. an artist or writer whose style is characterized by the representation of people or things as they actually are. "Dickens and other nineteenth-century realists"
+    - But it's quite hard to do...
+    - I mean... a sort of photo realistic version of snake? Kind of impossible? And gets into a whole bunch of shit that seems like a bad idea...
+- retwist
+    - No this seems stupid
+- revuist
+    - Writer of revues. No.
+- **CANDIDATE** sacrist
+    - "Much of the sacrist's work was connected with the church. He opened and closed the doors to the church, ensured that there were sufficient candles and oil, and that there were ashes and palms when necessary."
+    - Kind of like a janitor of a church... but not seeing it for Snake?
+    - Although keeping candles lit as a core thing, in a level that's laid out like a church, is not horrible? References to Madrid?
+    - Worth at least keeping in mind
+- sizeist
+    - "The meaning of SIZEISM is discrimination or prejudice directed against people because of their size and especially because of their weight."
+    - This is actually kind of funny in Snake in the sense that the game ultimately "discriminates" against longer snakes because they don't have enough room?
+    - But feels oddly complex to really work it out?
+- soloist
+    - Seems to basic?
+- sophist
+    - "a paid teacher of philosophy and rhetoric in ancient Greece, associated in popular thought with moral skepticism and specious reasoning. // a person who reasons with clever but fallacious arguments."
+    - Mmm, not really.
+- statist
+    - Nah
+- stylist
+    - ... I sort of like the idea, but not seeing it
+- **CANDIDATE** subsist
+    - "1. maintain or support oneself, especially at a minimal level."
+    - Something to that right? Maybe a really mean doling out of apples?
+- sumoist
+    - No
+- tachist
+    - Art movement
+- tennist
+    - Jesus. I mean, that's pretty funny but also stupid?
+    - You could have a PONG. But Tennist is just a bad word.
+- titlist
+    - Current champion. Stupid word.
+- **CANDIDATE** tourist
+    - YEAH! Maybe literally just snake on top of famous locations.
+- tsarist
+    - Nah.
+- tubaist
+    - Already in my candidates
+- tzarist
+    - Nah
+- untwist
+    - Nah
+- **CANDIDATE** utopist
+    - A "utopist" is someone who believes in or advocates for an ideal or perfect society or social system, often seen as impractical or unrealistic."
+    - All the apples, but also you don't grow? Lots of points? What is the Utopic endpoint of Snake? I think this is worth pursuing.
+- violist
+    - Just a bigger violin baby.
+
+## Eight letters
+
+- **CANDIDATE** activist
+    - There has to be a way this could work?
+    - "a person who campaigns to bring about political or social change."
+- **CANDIDATE** alarmist
+    - "someone who is considered to be exaggerating a danger and so causing needless worry or panic."
+    - This seems delightful to me... the game could freak out as you near a wall? CAREFULLL!!!!!
+- alienist
+    - No
+- alpinist
+    - Mountain climbing... I mean... there could conceivably be something to that, but initially no
+- altruist
+    - Fun but requires a social system that doesn't exist in Snake? Who would the Snake give their apples to?
+- annalist
+    - Nah
+- aphorist
+    - Nah
+- apiarist
+    - Bees... I mean bees are funny but hard to see the join
+- aquarist
+    - "a person who keeps an aquarium."
+    - Hard to see
+- arbalist
+    - "An "arbalist" refers to a person who shoots a crossbow, also known as a crossbowman, or a crossbow itself, especially a medieval one."
+    - So no? Or like some total reimagining where you fire the snake like a bolt across the screen to get the apple?
+- arborist
+    - Tree stuff... not seeing it...
+- archaist
+    - "an expert or collector of antiquities"
+    - Not really
+- **CANDIDATE** arsonist
+    - Ohhhh fire is interesting...
+- atticist
+    - "Atticism (meaning "favouring Attica", the region of Athens in Greece) was a rhetorical movement that began in the first quarter of the 1st century BC."
+    - Uh okay
+- aviarist
+    - Birds.
+- backlist
+    - Oh a nice nonstandard ist... "a publisher's list of older books still in print."
+    - Hard to imagine though... Gutenberg?
+- banjoist
+    - Music
+- bigamist
+    - Is the snake married already?
+- blurbist
+    - Feels like no
+- bongoist
+    - No
+- botanist
+    - "an expert in or student of the scientific study of plants."
+    - Another of those possible "demonstrate your knowledge" ones... not feeling it
+- cabalist
+    - "a follower of the ancient Jewish mystical tradition of Kabbalah."
+    - Hmm. Snake + Mysticism is kind of interesting to be honest, but I'm not sure how it would actually play out...
+- canoeist
+    - Canoes.
+- canonist
+    - law
+- centrist
+    - Boring
+- ceramist
+    - Pottery... I guess goes with ceramicist?
+    - Not feeling it
+- chartist
+    - "A chartist is a trader or analyst who uses technical analysis, primarily relying on charts and graphs of historical market data (like price and volume) to predict future price movements and make trading decisions"
+    - So no
+- classist
+    - What is the class system in Snake? Could there be one? And if there were how to express classism within it?
+- **CANDIDATE** coassist
+    - "to assist jointly"
+    - Hmm... multiplayer input for a single snake is interesting? Kind of fun potentially... chaotic and stupid?
+- colonist
+    - Hard to see. 
+- colorist
+    - Not really
+- comedist
+    - Weird word
+- demonist
+    - Nah
+- demotist
+    - No
+- diallist
+    - No
+- digamist
+    - "One who marries a second time; a deuterogamist." Jesus
+- ditheist
+    - Two equal gods. See also coassist in a way.
+- druggist
+    - Drugsssss.
+- duellist
+    - Here's that.
+- duettist
+    - No
+- dynamist
+    - No
+- **CANDIDATE** escapist
+    - Ohhh yeah. The snake escape.
+    - Oh wait.. it's about distractions from realist. That's funny. Hmmm.
+    - But still actually... kind of good... a double distraction?
+- essayist
+    - No
+- ethicist
+    - Hmmmmmmmno.
+- eugenist
+    - "the study of how to arrange reproduction within a human population to increase the occurrence of heritable characteristics regarded as desirable"
+    - Gross. And no repro in Snake to speak of?
+- eulogist
+    - Fits with elegist but maybe a better word?
+- euphuist
+    - No
+- exorcist
+    - "a person who expels or attempts to expel a supposed evil spirit from a person or place."
+    - Appealing... the Snake could be possessed? How would the player exorcise it?
+- fabulist
+    - Good word
+    - Well esp the liar one "a liar, especially a person who invents elaborate, dishonest stories."
+    - Hmmm... but a little unclear how that translates... I thought maybe the idea that the game lies to you about what's happening is interesting, but hard to spin
+- familist
+    - No
+- fatalist
+    - Same as Deist, so no
+- feminist
+    - Would be good to do but not sure there's something not pat?
+- finalist
+    - Intriguingly gamish...
+- finitist
+    - "Finitism is a philosophy of mathematics that accepts the existence only of finite mathematical objects"
+- flautist
+    - Music
+- futurist
+    - "one who studies and predicts the future especially on the basis of current trends"
+    - Hmmm... it could project current movement into the future some number of steps? Though it would always end up just looking like a line sticking out of the snake? Not really quite right?
+- hagadist
+    - No
+- halakist
+    - No
+- handlist
+    - No
+- hedonist
+    - "a person who believes that the pursuit of pleasure is the most important thing in life; a pleasure-seeker."
+    - Is the snake already a hedonist? It has no other job?
+- hobbyist
+    - Hmm
+- homilist
+    - No
+- humanist
+    - Nah
+- humorist
+    - No
+- hygieist
+    - "a specialist in the promotion of clean conditions for the preservation of health."
+    - No?
+- idealist
+    - "a person who is guided more by ideals than by practical considerations."
+    - Don't think so
+    - ?
+- idyllist
+    - No
+- intimist
+    - "1. of, relating to, or practicing intimism 2. of fiction : dealing chiefly with intimate and private especially psychological experiences."
+    - Hmmmm... maybe there's a way for this to be about an internal monologue from the Snake?
+- jehadist
+    - No
+- jihadist
+    - No
+- jingoist
+    - "Jingoism is nationalism in the form of aggressive and proactive foreign policy, such as a country's advocacy for the use of threats or actual force"
+    - No
+- junglist
+    - "Junglist is a slang term which first referred to a person living in an area of West Kingston, Jamaica, called Jungle"
+    - That's very specific
+- kabalist
+    - As above
+- kendoist
+    - No
+- lapidist
+    - Thought this was about butterflies for some reason but "A lapidist is a person whose business is to cut, polish, set, or deal in gemstones, or someone skilled in the art of cutting and engraving precious stones"
+    - No
+- legalist
+    - No
+- libelist
+    - "A "libelist" is a rare term, synonymous with "libeler," meaning someone who publishes or makes a libel, which is a false and damaging statement about someone, usually in writing"
+    - The Snake could libel... me? But a rare term so maybe not
+- linguist
+    - No
+- lobbyist
+    - No?
+- localist
+    - "A "localist" is someone who strongly emphasizes or is concerned with local matters, often advocating for local control and the promotion of local interests, businesses, and culture"
+    - No
+- loyalist
+    - No
+- luminist
+    - No
+- lutanist
+    - No
+- lutenist
+    - No
+- lyricist
+    - Don't think so
+- medalist
+    - Maybe interesting... awarding a medal at the end? Snake on a podium? Does this say much more than "competition" though?
+- melanist
+    - No
+
+---
+From here I'm just going to eyeball, can always come back through
+---
+
+- melodist
+- metalist
+- modalist
+- modelist
+- monodist
+- moralist
+- motorist
+- muralist
+- nativist
+- naturist
+- nepotist
+- niellist
+- nihilist
+    - Already did it
+- novelist
+- oghamist
+- oologist
+- opticist
+- optimist
+    - Did it
+- organist
+- pacifist
+- paganist
+- panelist
+- papalist
+- parodist
+- phallist
+- playlist
+    - Might be funny
+- polemist
+- populist
+- preexist
+- prosaist
+- psalmist
+- pugilist
+    - More fighting
+- quietist
+- rallyist
+- reenlist
+- rightist
+- rigorist
+- royalist
+- ruralist
+- sapphist
+- sarodist
+- satanist
+    - I mean, it would be fun.
+    - But I also simply know nothing about this
+- satirist
+- sciolist
+- semitist
+- shootist
+- simonist
+- simplist
+- sitarist
+- sodalist
+- solecist
+- stockist
+- tantrist
+    - "A "tantrist" is someone who practices or adheres to Tantrism, a spiritual tradition encompassing various Hindu and Buddhist esoteric practices that involve techniques, rituals, and ideologies aimed at achieving spiritual liberation or enlightenmen"
+    - In my dreams...
+- tenorist
+- theorist
+- totalist
+- totemist
+- trialist
+- ultraist
+- unionist
+- urbanist
+- vegetist
+- vitalist
+
+## Nine letters
+
+- absurdist
+    - Appealing.
+    - "intentionally ridiculous or bizarre; surreal."
+    - May not be distinct from Dadaist, may be a better word
+- aerialist
+- alchemist
+    - Including "a person who transforms or creates something through a seemingly magical process."
+    - Appealing...
+- allergist
+- analogist
+- anarchist
+    - "Anarchism is a political philosophy and movement that seeks to abolish all institutions that perpetuate authority, coercion, or hierarchy, primarily targeting the state and capitalism. Anarchism advocates for the replacement of the state with stateless societies and voluntary free associations."
+    - In the context of a game is a position like this distinct from absurdism? Does it suspend the rules? What happens in a game if you suspend the rules/authority of the game?
+- anatomist
+    - Snake and disection? Intriguing...
+- apologist
+- archivist
+- atonalist
+- auteurist
+- balladist
+- biblicist
+- bicyclist
+    - Cute
+- biologist
+- blacklist
+    - "a list of people or things that are regarded as unacceptable or untrustworthy and should be excluded or avoided."
+    - If the snake is blacklisted, who avoids it?
+    - Could you get blacklisted from the game and have to come back later?
+- careerist
+- catechist
+- **CANDIDATE** checklist
+    - Oh that's not bad...
+    - "a list of items required, things to be done, or points to be considered, used as a reminder."
+- collagist
+- columnist
+- communist
+- cornetist
+- crayonist
+- cymbalist
+- declinist
+- **CANDIDATE** defeatist
+    - "a person who expects or is excessively ready to accept failure."
+    - Snake dies before it hits the wall? Haha.
+- denturist
+- diabolist
+- dialogist
+- dogmatist
+- dramatist
+- ecologist
+- economist
+- ecumenist
+- enamelist
+- enologist
+- **CANDIDATE** eroticist
+    - "1. one who indulges in eroticism. 2. art, literature. one who uses erotic imagery in art or literature."
+    - Maybe some sexy audio?
+- euphemist
+- euthenist
+- exegetist
+- extremist
+- fantasist
+- fetishist
+- feudalist
+- flavorist
+- formalist
+- fusionist
+- geodesist
+- geologist
+- globalist
+- guitarist
+- haggadist
+- herbalist
+- hermetist
+- hygienist
+- hylozoist
+- **CANDIDATE** hypnotist
+    - I like the snake forming a spiral and it telling you to go eat an apple?
+- internist
+- karateist
+- larcenist
+- liturgist
+- machinist
+- mammonist
+- mannerist
+- marimbist
+- masochist
+    - Kind of did this with stoicism, or even umm... sadist, the other side of the coin
+- mechanist
+- medallist
+- meliorist
+- memoirist
+- mentalist
+- mesmerist
+- methodist
+- modernist
+- mosaicist
+- mutualist
+- nonartist
+- nonsexist
+- nontheist
+- occultist
+- ocularist
+- orthotist
+- otologist
+- pantheist
+- passivist
+- pastelist
+- pessimist
+- physicist
+- pluralist
+- pogromist
+- prosodist
+- publicist
+- putschist
+- racialist
+- recordist
+- reformist
+- reservist
+- rhythmist
+- ritualist
+- scenarist
+- scientist
+    - Seems like it would be nice
+- semimoist
+- serialist
+- shamanist
+- socialist
+- solipsist
+- spiritist
+- swarajist
+- syllogist
+- symbolist
+- synergist
+- tattooist
+- tenebrist
+- terrorist
+    - Bit touchy
+- therapist
+- theurgist
+- timpanist
+- trapezist
+- tritheist
+- tympanist
+- ufologist
+- urologist
+- verbalist
+- **CANDIDATE** violinist
+    - Well could be
+- voodooist
+- vorticist
+- welfarist
+- zeitgeist
+- zitherist
+- zoologist
+
+## Ten letters
+
+- abiogenist
+- absolutist
+- aeronomist
+- agronomist
+- algebraist
+- algologist
+- allegorist
+- anecdotist
+- antagonist
+- antisexist
+- automatist
+- autonomist
+- balloonist
+- bassoonist
+- belletrist
+- biochemist
+- bryologist
+- capitalist
+- cartoonist
+- centralist
+- ceramicist
+- cetologist
+- chauvinist
+- classicist
+- clavierist
+- colloquist
+- completist
+- concretist
+- **CANDIDATE** conformist
+    - "a person who conforms to accepted behavior or established practices."
+    - Map out where the Snake should go... like AI path-finding, die if you leave the track
+- cornettist
+- cytologist
+- ecotourist
+- empiricist
+- ergonomist
+- ethologist
+- eugenicist
+- euhemerist
+- evangelist
+- exodontist
+- factualist
+- federalist
+- fetologist
+- fictionist
+- folklorist
+- gemologist
+- generalist
+- geneticist
+- geochemist
+- gestaltist
+- glossarist
+- gradualist
+- graffitist
+- henotheist
+- horologist
+- ideologist
+- illuminist
+- immoralist
+- intertwist
+- journalist
+- kineticist
+- legitimist
+- liberalist
+- librettist
+- literalist
+- magazinist
+- manicurist
+- maximalist
+- militarist
+- minimalist
+- misandrist
+- misogamist
+- misogynist
+- mixologist
+- monarchist
+- monetarist
+- monogamist
+- monologist
+- monopolist
+- monotheist
+- mycologist
+- **CANDIDARTE** narcissist
+    - What could be funnier than doing this twice?
+- naturalist
+- negativist
+- neorealist
+- neutralist
+- nominalist
+- nostalgist
+- obituarist
+- oenologist
+- oncologist
+- ontologist
+- operettist
+- orchardist
+- organicist
+- orthoepist
+- pacificist
+- panegyrist
+- pantywaist
+    - "a feeble or cowardly person."
+    - I mean, I don't think I can, but I love what a surprise this was in the list
+- pastellist
+- pediatrist
+- pedicurist
+- pedologist
+- pedorthist
+- penologist
+- pharmacist
+- piccoloist
+- plagiarist
+    - There could be something funny here.
+- podiatrist
+- polemicist
+- polygamist
+- polytheist
+- pomologist
+- positivist
+- pragmatist
+- prefascist
+- presentist
+- recidivist
+- recitalist
+- relativist
+- reunionist
+- revanchist
+- revivalist
+- rhapsodist
+- rheologist
+- roboticist
+- secularist
+- seminarist
+- sensualist
+- separatist
+- serologist
+- sexologist
+- shirtwaist
+- sinologist
+- solidarist
+- specialist
+- stigmatist
+- strategist
+- suffragist
+- surrealist
+    - In a perfect world
+- symphonist
+- syncretist
+- synonymist
+- synthesist
+- taxonomist
+- threnodist
+- topologist
+- toponymist
+- trivialist
+- trombonist
+- typologist
+
+## Eleven letters
+
+- abortionist
+- accompanist
+- adoptionist
+- adventurist
+- anesthetist
+- anthologist
+- antifascist
+- antirealist
+- antistatist
+- aquarellist
+- aquatintist
+- artillerist
+- audiologist
+- **CANDIDATE** behaviorist
+    - "A behaviorist is someone who advocates or practices behaviorism, a theory that human and animal behavior is based on conditioning (mental training and the influence of habit), rather than being explained by thoughts and feelings."
+    - I mean, it's games right...
+- bimetallist
+- bioethicist
+- chiropodist
+- clarinetist
+- clericalist
+- communalist
+- comparatist
+- computerist
+- consumerist
+    - "a person who is preoccupied with the acquisition of consumer goods."
+- corporatist
+- coscenarist
+- cosmogonist
+- cosmologist
+- creationist
+    - "a person who believes that the universe and living organisms originate from specific acts of divine creation, as in the biblical account."
+    - Some kind of actual video (Blow-like) of me making the game?
+- criminalist
+- determinist
+- dichotomist
+- diplomatist
+- disunionist
+- divisionist
+- ecofeminist
+- ecumenicist
+- endodontist
+- epigraphist
+- equilibrist
+- ethnologist
+- etymologist
+- eudaemonist
+- exclusivist
+- funambulist
+- garbologist
+- gemmologist
+- genealogist
+- geobotanist
+- hairstylist
+- harmonicist
+- histologist
+- historicist
+- hospitalist
+- hydrologist
+- hyperbolist
+- illusionist
+    - "a person who performs tricks that deceive the eye; a magician."
+- immanentist
+- imperialist
+- iridologist
+- irredentist
+- keyboardist
+- landscapist
+- limnologist
+- madrigalist
+- malapropist
+- mammalogist
+- mandolinist
+- masculinist
+- materialist
+- medievalist
+- memorialist
+- metrologist
+- **CANDIDATE** miniaturist
+    - "noun. an artist whose specialty is small, discrete works. a person who makes, collects, or specializes in miniature objects: a miniaturist with a collection of dollhouses."
+- monologuist
+- museologist
+- mycophagist
+- mythologist
+- nationalist
+- necrologist
+- neurologist
+- nonbotanist
+- nonfeminist
+- numismatist
+- objectivist
+- oligopolist
+- opportunist
+- optometrist
+- orthopedist
+- osteologist
+- pantomimist
+- parachutist
+- pastoralist
+- paternalist
+- pathologist
+- personalist
+- petrologist
+- pheneticist
+- philatelist
+- philologist
+- phonemicist
+- phonologist
+- photoresist
+- phycologist
+- physiatrist
+- physicalist
+- pleinairist
+- pointillist
+- poltergeist
+- polyamorist
+- portraitist
+- prefeminist
+- primitivist
+- probabilist
+- prosthetist
+- protagonist
+- radiologist
+- rationalist
+- regionalist
+- religionist
+- researchist
+- revisionist
+- romanticist
+- saxophonist
+- semanticist
+- semiologist
+- semioticist
+- sociologist
+- soliloquist
+- stenotypist
+- superegoist
+- supremacist
+- suprematist
+- survivalist
+- syndicalist
+- systematist
+- taphonomist
+- taxidermist
+- teetotalist
+- teleologist
+- telephonist
+- theosophist
+- tobacconist
+- tobogganist
+- tribologist
+- vacationist
+- vanguardist
+- vineyardist
+- virginalist
+- voluntarist
+- xylophonist
+
+## Twelve letters
+
+- abolitionist
+- accordionist
+- anaesthetist
+- anecdotalist
+- angelologist
+- antihumanist
+- antinovelist
+- apiculturist
+- apocalyptist
+- assemblagist
+- automobilist
+- aviculturist
+- behaviourist
+- bibliopegist
+- bibliopolist
+- biophysicist
+- bioscientist
+- bioterrorist
+- cardiologist
+- caricaturist
+- chronologist
+- clarinettist
+- coalitionist
+- coleopterist
+- collectivist
+- conchologist
+- conspiracist
+- cosmochemist
+- cryptologist
+    - An encrypted version of the game?
+- demonologist
+- dendrologist
+- deontologist
+- deviationist
+- diffusionist
+- diversionist
+- econometrist
+- ecoterrorist
+- editorialist
+- educationist
+- elocutionist
+- embryologist
+- emotionalist
+- entomologist
+- enzymologist
+- escapologist
+    - "an entertainer specializing in escaping from the confinement of such things as ropes, handcuffs, and chains."
+    - Yeah?
+- essentialist
+- evolutionist
+- exclusionist
+- excursionist
+- exobiologist
+- expansionist
+- extortionist
+- futurologist
+- gastronomist
+- geophysicist
+- geoscientist
+- glaciologist
+- glossolalist
+- graphologist
+- gymnosophist
+- gynecologist
+- hematologist
+- heterosexist
+- hyperrealist
+- immunologist
+- inflationist
+- intuitionist
+- isolationist
+- lexicologist
+- malacologist
+- mercantilist
+- metallurgist
+- microscopist
+- mineralogist
+- monochromist
+- morphologist
+- motorcyclist
+- musicologist
+- nematologist
+- nephrologist
+- neurochemist
+- noctambulist
+- nonbiologist
+- noncommunist
+- noneconomist
+- nonscientist
+- nonsocialist
+- numerologist
+- nutritionist
+- obscurantist
+    - "deliberately preventing the facts or full details of something from becoming known."
+- oceanologist
+- operationist
+- orthodontist
+- orthopterist
+- palindromist
+- palynologist
+- papyrologist
+- partitionist
+- perfusionist
+- periodontist
+- phillumenist
+- phlebotomist
+- photochemist
+- phrenologist
+- physiologist
+- phytochemist
+- pictorialist
+- polygraphist
+- postfeminist
+- pragmaticist
+- precisionist
+- proctologist
+- propagandist
+- psephologist
+- psychiatrist
+- psychologist
+- pyrotechnist
+- radiochemist
+- receptionist
+- reductionist
+- secessionist
+- seismologist
+- selectionist
+- selenologist
+- semifinalist
+- silhouettist
+- snowmobilist
+- somnambulist
+- speleologist
+- spiritualist
+- subjectivist
+- technologist
+- telegraphist
+- teratologist
+- toxicologist
+- trampolinist
+- trichologist
+- triumphalist
+- ultraleftist
+- ultrarealist
+- universalist
+- urbanologist
+- vibraharpist
+- vibraphonist
+- voluntaryist
+- voluntourist
+
+## Thirteen letters
+
+- acupuncturist
+- adaptationist
+- agriculturist
+- annexationist
+- anticommunist
+- antiformalist
+- antimodernist
+- antisocialist
+- antiterrorist
+- aquaculturist
+- arachnologist
+- archaeologist
+- calligraphist
+- campanologist
+- catastrophist
+- ceremonialist
+- chiaroscurist
+- cinquecentist
+- clavichordist
+- climatologist
+- commercialist
+- comparativist
+- conceptualist
+- connectionist
+- contortionist
+- contrabandist
+- contrabassist
+- contrapuntist
+- coreligionist
+- corruptionist
+- cosmetologist
+- criminologist
+- cryobiologist
+- cyberneticist
+- demolitionist
+- dermatologist
+- deuteragonist
+- devolutionist
+- diabetologist
+- documentalist
+- documentarist
+- dodecaphonist
+- electrologist
+- encyclopedist
+- epigrammatist
+- ethnobotanist
+- exhibitionist
+- expressionist
+- feuilletonist
+- fluoroscopist
+- functionalist
+- gastroscopist
+- geostrategist
+- gerontologist
+- herpetologist
+- ichthyologist
+- immaterialist
+- immunochemist
+- impressionist
+- indeterminist
+- individualist
+- industrialist
+- irrationalist
+- irreligionist
+- kinesiologist
+- laparoscopist
+- lepidopterist
+- liberationist
+- lichenologist
+- malariologist
+- mariculturist
+- martyrologist
+- melodramatist
+- meteoriticist
+- meteorologist
+- methodologist
+- millennialist
+- monometallist
+- myrmecologist
+- narratologist
+- neoclassicist
+- neonatologist
+- neoplasticist
+- noncapitalist
+- nonconformist
+- nonmonetarist
+- nonspecialist
+- onomatologist
+- oppositionist
+- ornithologist
+- paleobotanist
+- particularist
+- percussionist
+- perfectionist
+- phenomenalist
+- philhellenist
+- phraseologist
+- planetologist
+- postcommunist
+- postmodernist
+- precapitalist
+- primatologist
+- progressivist
+- projectionist
+- protectionist
+- provincialist
+- pteridologist
+- pulmonologist
+- recreationist
+- reflexologist
+- repressionist
+- revolutionist
+- sacerdotalist
+- sadomasochist
+- separationist
+- sericulturist
+- sociolinguist
+- structuralist
+- subspecialist
+- superlobbyist
+- televangelist
+- thanatologist
+- thaumaturgist
+- thermochemist
+- ultrarightist
+- ultraroyalist
+- unilateralist
+- ventriloquist
+- vexillologist
+- violoncellist
+- viticulturist
+- vocationalist
+- volcanologist
+- vulcanologist
+- watercolorist
+
+## Fourteen letters
+
+- abstractionist
+- aerodynamicist
+- anthropologist
+- antimilitarist
+- antimonarchist
+- antimonopolist
+- antiseparatist
+- aromatherapist
+- associationist
+- astrobiologist
+- astrophysicist
+- bacteriologist
+- bioregionalist
+- biosystematist
+- bronchoscopist
+- chemotherapist
+- citriculturist
+- compositionist
+- constructivist
+- cooperationist
+- cytogeneticist
+- destructionist
+- dialectologist
+- ecclesiologist
+- educationalist
+- electrochemist
+- epidemiologist
+- epistemologist
+- ethnobiologist
+- exceptionalist
+- existentialist
+- floriculturist
+- fundamentalist
+- geohydrologist
+- harpsichordist
+- horticulturist
+- hydrobiologist
+- hydrogeologist
+- hypermodernist
+- hypnotherapist
+- incrementalist
+- indifferentist
+- integrationist
+- kremlinologist
+- liturgiologist
+- metafictionist
+- microbiologist
+- microeconomist
+- neocolonialist
+- neuroanatomist
+- neurobiologist
+- neuroscientist
+- nonobjectivist
+- **CANDIDATE** obstructionist
+    - "the practice of deliberately impeding or delaying the course of legal, legislative, or other procedures."
+- operationalist
+- paleobiologist
+- paleoecologist
+- paleomagnetist
+- paleontologist
+- paleozoologist
+- pantisocratist
+- parasitologist
+- perinatologist
+- pharmacologist
+- philanthropist
+- photobiologist
+- photogeologist
+- postcapitalist
+- prerevisionist
+- prohibitionist
+- prosthodontist
+- protozoologist
+- psycholinguist
+- pyramidologist
+- radiobiologist
+- radiotherapist
+- repudiationist
+- reservationist
+- restrictionist
+- rheumatologist
+- sacramentalist
+- segregationist
+- sensationalist
+- sentimentalist
+- silviculturist
+- sociobiologist
+- spectroscopist
+- territorialist
+- traditionalist
+- ultramodernist
+- vivisectionist
+
+## Fifteen letters
+
+- agriculturalist
+- anthroposophist
+- antiabortionist
+- antimaterialist
+- antinationalist
+- antirationalist
+- assimilationist
+- biopsychologist
+- biotechnologist
+- chemotaxonomist
+- chronobiologist
+- colonizationist
+- confessionalist
+- conservationist
+- constructionist
+- conventionalist
+- cryptozoologist
+    - "the search for and study of animals whose existence or survival is disputed or unsubstantiated, such as the Loch Ness monster and the yeti."
+    - Could the snake search for these?
+    - Or could the player?
+- cytopathologist
+- daguerreotypist
+- ecotoxicologist
+- emancipationist
+- endocrinologist
+- experimentalist
+- geochronologist
+- geomorphologist
+- governmentalist
+- hydrodynamicist
+- instrumentalist
+- insurrectionist
+- intellectualist
+- interventionist
+- multilateralist
+- nonpsychiatrist
+- ophthalmologist
+- phenomenologist
+- photojournalist
+- physiotherapist
+- preformationist
+- preservationist
+- pseudoscientist
+- psychobiologist
+- psychophysicist
+- psychotherapist
+- quarterfinalist
+- resurrectionist
+- retrovirologist
+- roentgenologist
+- sedimentologist
+- supernaturalist
+- superspecialist
+- urogynecologist

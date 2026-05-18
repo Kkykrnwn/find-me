@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tembak Target</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .screen {
+      width: 1000px;
+      border: 2px solid black;
+      height: 600px;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="home_screen" class="screen">
+    <div class="section">
+
+      <img src="./Sprites/shooter.png" alt="shooter" width="200">
+      <input required type="text" name="username" placeholder="input username">
+      <select name="level">
+        <option value="3">easy</option>
+        <option value="2">medium</option>
+        <option value="1">hard</option>
+      </select>
+      <div>
+        <label>
+          <img src="./Sprites/gun1.png" width="50" alt="">
+          <input required type="radio" name="gun" value="0" checked>
+        </label>
+        <label>
+          <img src="./Sprites/gun2.png" width="50" alt="">
+          <input required type="radio" name="gun" value="1">
+        </label>
+
+      </div>
+      <div>
+        <label>
+          <img src="./Sprites/target1.png" width="50" alt="">
+          <input required type="radio" name="target" value="1" checked>
+        </label>
+        <label>
+          <img src="./Sprites/target2.png" width="50" alt="">
+          <input required type="radio" name="target" value="2">
+        </label>
+        <label>
+          <img src="./Sprites/target3.png" width="50" alt="">
+          <input required type="radio" name="target" value="3">
+        </label>
+      </div>
+      <div>
+        <button type="submit">Play game</button>
+        <button type="button" onclick="instruction.classList.toggle('hidden')">Instruction</button>
+      </div>
+    </div>
+    <div class="section hidden" id="instruction" style="position: relative;">
+      <div class="close" style="color:red;position:absolute; top: 1rem;right:1rem; cursor:pointer;font-weight:bold;"
+        onclick="instruction.classList.toggle('hidden')">x
+      </div>
+      <div>
+
+        <h1>How to play game</h1>
+        <ol>
+          <li>Input username</li>
+          <li>Point the pointer at the target</li>
+          <li>Click to shoot</li>
+          <li>Get as many point as possible</li>
+          <li>Enjoy</li>
+        </ol>
+      </div>
+    </div>
+  </form>
+  <div id="game_screen" class="hidden">
+    <div class="screen" style="position:relative;">
+      <div id="pause_dialog" class="hidden"
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:2rem;background:white;border-radius:1rem;">
+        <h1>Game Paused</h1>
+        <button onclick="game.resume();pause_dialog.classList.toggle('hidden')">Resume</button>
+      </div>
+      <div id="over_dialog" class="hidden"
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:2rem;background:white;border-radius:1rem;">
+        <h1>Game Over</h1>
+        <p id="over_name"></p>
+        <p id="over_score"></p>
+        <button onclick="game.start();over_dialog.classList.toggle('hidden')">Restart</button>
+        <button onclick="save_score()">Save Score</button>
+      </div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <div>
+      <h1>
+        Leaderboard
+      </h1>
+      <select name="sort" id="sort_by" onchange="load_score()">
+        <option value="name">Sort By Name</option>
+        <option value="score">Sort By Score</option>
+      </select>
+      <div id="leaderboard"></div>
+    </div>
+  </div>
+  <div class="hidden">
+    <img src="./Sprites/background.jpg" alt="" id="backgroundImage">
+    <img src="./Sprites/pointer.png" alt="" id="pointerImage">
+    <img src="./Sprites/boom.png" alt="" id="boomImage">
+  </div>
+  <script>
+    let inputUser = {
+      username: 'test',
+      level: 1,
+      gun: 1,
+      target: 1,
+    };
+    const ctx = canvas.getContext('2d')
+    home_screen.addEventListener('submit', e => {
+      e.preventDefault()
+      const formdata = new FormData(e.target)
+      for (const [key, value] of formdata) {
+        inputUser[key] = value
+      }
+      home_screen.classList.add('hidden')
+      game_screen.classList.remove('hidden')
+      main()
+    })
+    function random(min, max) {
+      return Math.round(Math.random() * (max - min) + min)
+    }
+    class Target {
+      constructor() {
+        this.image = new Image()
+        this.image.src = `./Sprites/target${inputUser.target}.png`
+        this.size = 148;
+        this.x = random(0, canvas.width - this.size)
+        this.y = random(0, canvas.height - this.size)
+        this.opacity = 0;
+      }
+      draw() {
+        if (this.opacity <= 1) {
+          this.opacity += 0.05
+        }
+        ctx.save()
+        ctx.globalAlpha = this.opacity
+        ctx.drawImage(this.image, this.x, this.y)
+        ctx.restore()
+      }
+    }
+    class Boom {
+      constructor(x, y) {
+        this.img = boomImage
+        this.x = x;
+        this.y = y;
+        this.scale = 0.2;
+        this.lifeSpan = 0.3;
+      }
+      draw() {
+        this.scale += 0.05
+        ctx.drawImage(this.img, this.x, this.y, this.img.width * this.scale, this.img.height * this.scale)
+      }
+
+    }
+    class Gun {
+      constructor(game) {
+        this.game = game
+        this.images = [
+          new Image(),
+          new Image()
+        ]
+        this.images[0].src = './Sprites/gun1.png'
+        this.images[1].src = './Sprites/gun2.png'
+        this.spawnTargetTimer = parseInt(inputUser.level);
+        this.width = this.images[0].width * 0.5
+        this.height = this.images[0].height * 0.5
+        this.y = canvas.height - this.height
+        this.x = this.game.pointer.y
+        this.change = false;
+      }
+      switch() {
+        this.switch_condition = true
+      }
+      draw() {
+        if (this.switch_condition) {
+          this.y += 20
+          if (this.y > canvas.height) {
+            this.switch_condition = false;
+            inputUser.gun = inputUser.gun == 1 ? 0 : 1
+          }
+        } else {
+          if (this.y > canvas.height - this.height) {
+            this.y -= 20
+          }
+        }
+        this.x = this.game.pointer.x
+        ctx.drawImage(this.images[inputUser.gun], this.game.pointer.x, this.y, this.width, this.height)
+
+      }
+    }
+    class Game {
+      constructor() {
+        canvas.width = 1000
+        canvas.height = 600
+        this.pointer = {
+          x: canvas.width / 2,
+          y: canvas.height / 2,
+          size: 53,
+        }
+        this.targets = [
+          new Target()
+        ]
+        this.booms = []
+        this.gun = new Gun(this)
+        this.timer = 30
+        this.score = 0;
+        this.deltaTime = 0;
+        this.countdown = 3
+        this.spawnTargetTimer = parseInt(inputUser.level)
+        this.start()
+        this.listener()
+      }
+      start() {
+        this.targets = [
+          new Target()
+        ]
+        this.booms = []
+        this.score = 0;
+        this.timer = 30
+        this.paused = false
+        this.lastTime = performance.now()
+        this.countdown = 3
+        this.render(ctx)
+      }
+      resume() {
+        this.countdown = 3
+        this.paused = false
+        this.lastTime = performance.now()
+        this.render(ctx)
+      }
+      collide(a, b) {
+        return a.x + a.size >= b.x && a.x <= b.x + b.size && a.x + a.size >= b.x && a.x <= b.x + b.size
+      }
+      update() {
+        const currentTime = performance.now()
+        this.deltaTime = (currentTime - this.lastTime) / 1000
+        this.lastTime = currentTime;
+        if (this.countdown > 0) {
+          this.countdown -= this.deltaTime
+          return
+        }
+        this.timer -= this.deltaTime
+        if (this.timer <= 0) {
+          this.paused = true;
+          over_name.innerText = inputUser.username
+          over_score.innerText = this.score
+          game.score = this.score
+          over_dialog.classList.remove('hidden')
+        }
+        this.spawnTargetTimer -= this.deltaTime
+        if (this.spawnTargetTimer < 0) {
+          this.targets.push(new Target())
+          this.spawnTargetTimer = parseInt(inputUser.level)
+        }
+        this.booms.forEach((item, i) => {
+          item.lifeSpan -= this.deltaTime
+          if (item.lifeSpan < 0) {
+            this.booms.splice(i, 1)
+          }
+        })
+      }
+      render(ctx) {
+        this.update()
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.fillStyle = 'black'
+        ctx.fillRect(0, 0, 20, 20)
+        ctx.drawImage(backgroundImage, 0, 0)
+        this.targets.forEach(target => {
+          target.draw()
+        })
+        this.booms.forEach(boom => {
+          boom.draw()
+        })
+        ctx.drawImage(pointerImage, this.pointer.x, this.pointer.y)
+        this.gun.draw()
+
+        this.render_UI()
+        if (!this.paused) {
+          requestAnimationFrame(() => this.render(ctx))
+        }
+      }
+
+      render_UI() {
+        ctx.save()
+        ctx.globalAlpha = 0.5
+        ctx.fillStyle = 'black'
+        ctx.fillRect(0, 0, canvas.width, 80)
+        ctx.restore()
+        ctx.fillStyle = 'white'
+        ctx.font = 'bold 24px Arial'
+        ctx.textBaseline = 'middle'
+        ctx.textAlign = 'left'
+        ctx.fillText(`Name : ${inputUser.username}`, 50, 40)
+        ctx.textAlign = 'right'
+        ctx.fillText(`Timer : ${Math.round(this.timer)}`, canvas.width - 50, 40)
+        ctx.textAlign = 'center'
+        ctx.fillText(`Score : ${this.score}`, canvas.width / 2, 40)
+        if (this.countdown > 0) {
+          ctx.fillStyle = 'black'
+          ctx.font = 'bold 48px Arial'
+
+          ctx.fillText(Math.round(this.countdown), canvas.width / 2, canvas.height / 2)
+        }
+      }
+      listener() {
+        window.addEventListener('mousemove', (e) => {
+          const bound = canvas.getBoundingClientRect()
+          const clientX = e.clientX - bound.left - pointerImage.width / 2
+          const clientY = e.clientY - bound.top - pointerImage.height / 2
+          this.pointer.x = clientX
+          this.pointer.y = clientY
+
+        })
+        canvas.addEventListener('click', (e) => {
+          if ((this.countdown > 0) || this.paused) return
+          this.booms.push(new Boom(this.pointer.x, this.pointer.y))
+          let ada = false
+          this.targets.forEach((target, i) => {
+            if (this.collide(this.pointer, target) && !ada) {
+              this.targets.splice(i, 1)
+              ada = true;
+              this.score++
+            }
+          })
+          if (!ada && !this.paused) {
+            this.timer -= 5;
+          }
+        })
+        window.addEventListener('keydown', (e) => {
+          if (e.code == 'Escape') {
+            e.preventDefault()
+            this.paused = true;
+            pause_dialog.classList.remove('hidden')
+          }
+          if (e.code == 'Space') {
+            e.preventDefault()
+            this.gun.switch()
+          }
+        })
+      }
+    }
+    function main() {
+      game = new Game()
+    }
+    function save_score() {
+      const score = JSON.parse(localStorage.getItem('score') || '[]')
+
+      score.push({
+        name: inputUser.username,
+        score: game.score
+      })
+      localStorage.setItem('score', JSON.stringify(score))
+      load_score()
+    }
+    function load_score() {
+      let html = `<table border='1'>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+        `
+      let score = JSON.parse(localStorage.getItem('score') || '[]')
+      if (sort_by.value == 'name') {
+        score = score.sort((a, b) => a.name.localeCompare(b.name))
+      } else {
+        score = score.sort((a, b) => b.score - a.score)
+      }
+      score.forEach(item => {
+        html += '<tr>'
+        html += `<td>${item.name}</td>`
+        html += `<td>${item.score}</td>`
+        html += '</td>'
+      })
+      html += '</table>'
+      leaderboard.innerHTML = html
+    }
+    load_score()
+  </script>
+</body>
+
+</html>

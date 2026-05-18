@@ -1,0 +1,52 @@
+body {
+	height: 100vh;
+	background-color: #233;
+	color: white;
+	font-family: sans-serif;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+label {
+	position: fixed;
+	top: 30vh;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1.2rem;
+	padding: 1rem;
+	padding-right: 0;
+	margin-top: 1rem;
+	transform-origin: 1rem;
+	border: 1px solid #ddd;
+	border-radius: 1rem;
+	box-shadow: 0 1rem 1rem #012;
+}
+input.focused {
+	animation: fall 5s ease-in forwards;
+}
+
+@keyframes fall {
+	20% {
+		transform: none;
+	}
+	40% {
+		padding-left: 1rem;
+	}
+	90% {
+		transform: rotate(90deg);
+	}
+	99% {
+		transform: translateY(300vh) rotate(90deg);
+		padding-left: 50%;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

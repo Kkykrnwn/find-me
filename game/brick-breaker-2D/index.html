@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0">
+    <link rel="stylesheet" 
+          href="style.css">
+    <title>Brick Breaker 2D</title>
+</head>
+
+<body>
+    <div id="startScreen">
+        <h2>Brick Breaker 2D</h2>
+        <label for="playerName">
+            Masukan Nama Kamu
+        </label>
+        <input type="text" 
+               id="playerName" 
+               placeholder="Your Name">
+        <button id="startButton">
+            Mulai
+        </button>
+    </div>
+
+    <div id="gameScreen" 
+         style="display: none;">
+        <canvas id="canvas"></canvas>
+        <canvas id="canvas1"></canvas>
+        <div style="display:inline">
+            <h2 style="text-align:center" 
+                id="curr_score">
+                SKOR KAMU:
+            </h2>
+            <h2 style="text-align:center" 
+                id="high_score">
+                SKOR TERTINGGI:
+            </h2>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
