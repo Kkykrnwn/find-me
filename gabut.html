@@ -1,942 +1,488 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Game Collection</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap"
-            rel="stylesheet"
-        />
-        
         <link rel="icon" href="./images/icon.png" type="image/png">
-        
+        <title>Proyek Gabutku</title>
         <style>
-            /* Enhanced Rain-like Background */
-            body {
-                background: radial-gradient(
-                    ellipse at bottom,
-                    #0a0a2a 0%,
-                    #000000 100%
-                );
-                color: #ffffff;
-                padding: 20px;
-                overflow-x: hidden;
-                position: relative;
-                scroll-behavior: smooth;
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+            /* Tema Default (Biru gelap) */
+            :root {
+                --primary-color: #2196f3;
+                --secondary-color: #bdbdbd;
+                --background-color: #121212;
+                --text-color: #e0e0e0;
+                --glow-color: #2196f3;
             }
 
-            .falling-line {
+            body {
+                font-family: "Poppins", sans-serif;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                transition:
+                    background-color 0.5s,
+                    color 0.5s;
+                padding: 20px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* Perbaikan: Hapus overflow: hidden; */
+            }
+
+            .background-light-container {
                 position: fixed;
-                left: 0;
                 top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
-                z-index: -1;
-                overflow: hidden;
+                z-index: -2;
                 pointer-events: none;
-                background: linear-gradient(
-                    to bottom,
-                    rgba(57, 255, 20, 0.1) 0%,
-                    transparent 20%,
-                    transparent 80%,
-                    rgba(57, 255, 20, 0.1) 100%
-                );
-                background-size: 100% 5px;
-                animation: scrollEffect 50s linear infinite;
+                overflow: hidden;
             }
 
-            .line {
+            .light-streak {
                 position: absolute;
-                width: 1px;
-                height: 150px;
-                background: linear-gradient(
-                    to bottom,
-                    transparent 0%,
-                    rgba(57, 255, 20, 0.8) 50%,
-                    rgba(0, 249, 255, 0.8) 51%,
-                    transparent 100%
-                );
-                animation: fall linear infinite;
-                box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 0 10px 5px var(--glow-color);
+                opacity: 0;
+                animation: light-fall linear infinite;
             }
 
-            @keyframes fall {
+            @keyframes light-fall {
                 0% {
-                    transform: translateY(-150px);
+                    transform: translateX(var(--x)) translateY(var(--y))
+                        scale(1);
                     opacity: 0;
                 }
                 10% {
-                    opacity: 0.8;
-                }
-                90% {
-                    opacity: 0.8;
-                }
-                100% {
-                    transform: translateY(100vh);
-                    opacity: 0;
-                }
-            }
-
-            @keyframes gradientAnimation {
-                0% {
-                    background-position: 0% 50%;
-                }
-                50% {
-                    background-position: 100% 50%;
-                }
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
-
-            /* Enhanced Custom Scrollbar */
-            ::-webkit-scrollbar {
-                width: 14px;
-                height: 14px;
-            }
-
-            ::-webkit-scrollbar-track {
-                background: rgba(0, 0, 0, 0.2);
-                border-left: 1px solid rgba(255, 255, 255, 0.1);
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background: linear-gradient(to bottom, #39ff14, #00f9ff);
-                border-radius: 8px;
-                border: 2px solid rgba(255, 255, 255, 0.1);
-                box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-                transition: all 0.3s ease;
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-                background: linear-gradient(to bottom, #3dff00, #00ddff);
-                box-shadow: 0 0 15px rgba(57, 255, 20, 0.8);
-            }
-
-            @keyframes scrollEffect {
-                0% {
-                    background-position: 0 0;
-                }
-                100% {
-                    background-position: 0 100%;
-                }
-            }
-
-            /* Enhanced Click Animation */
-            @keyframes gameClickAnimation {
-                0% {
-                    transform: scale(1);
                     opacity: 1;
-                    filter: brightness(1);
                 }
-                50% {
-                    transform: scale(0.92);
-                    box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
-                    opacity: 0.9;
-                    filter: brightness(1.4);
+                80% {
+                    opacity: 1;
                 }
                 100% {
-                    transform: scale(1.1);
-                    box-shadow: 0 0 50px rgba(57, 255, 20, 0);
+                    transform: translateX(calc(var(--x) + 120vw))
+                        translateY(calc(var(--y) + 120vh)) scale(0.5);
                     opacity: 0;
-                    filter: brightness(2);
                 }
             }
 
-            :root {
-                --neon-green: #39ff14;
-                --neon-blue: #00f9ff;
-                --dark-bg: #0f0f1a;
-                --card-bg: #1a1a2e;
-                --text-light: #ffffff;
-                --text-dim: #aaaaaa;
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: "Press Start 2P", cursive;
-                padding: 20px;
-                overflow-x: hidden;
-                scroll-behavior: smooth;
-            }
-
-            .header {
-                text-align: center;
-                margin: 30px 0;
-                animation: fadeIn 1s ease-out;
-            }
-
-            .header h1 {
-                font-family: "Bungee", cursive;
-                font-size: 3rem;
-                margin-bottom: 20px;
-                background: linear-gradient(
-                    to right,
-                    var(--neon-green),
-                    var(--neon-blue)
-                );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
-            }
-
-            .games-container {
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 30px;
-                padding: 20px;
-            }
-
-            .game-card {
-                background: var(--card-bg);
-                border-radius: 10px;
-                overflow: hidden;
-                cursor: pointer;
-                transition:
-                    transform 0.3s ease,
-                    box-shadow 0.3s ease;
-                animation: cardEntry 0.8s ease-out;
-                animation-fill-mode: both;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                width: 100%;
                 position: relative;
-                border: 2px solid rgba(57, 255, 20, 0.1);
+                z-index: 1;
             }
 
-            .game-card:hover {
-                transform: translateY(-10px) scale(1.03);
-                box-shadow: 0 10px 20px rgba(57, 255, 20, 0.2);
-                border-color: var(--neon-green);
+            .project-card {
+                background-color: #1e1e1e;
+                border-radius: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                transform-style: preserve-3d;
+                perspective: 1000px;
+                text-decoration: none;
+                transition: transform 0.3s ease-in-out;
             }
 
-            .game-card:active {
-                transform: translateY(-5px) scale(0.98);
+            .project-card:hover {
+                transform: translateY(-5px) rotateX(3deg) scale(1.01);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
             }
 
-            .game-card::before {
+            .project-card:active {
+                transform: scale(0.98);
+            }
+
+            .project-card::before {
                 content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
-                right: 0;
-                height: 3px;
-                background: linear-gradient(
-                    to right,
-                    var(--neon-green),
-                    var(--neon-blue)
-                );
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: transform 0.3s ease;
-            }
-
-            .game-card:hover::before {
-                transform: scaleX(1);
-            }
-
-            .game-image {
                 width: 100%;
-                height: 180px;
+                height: 100%;
+                background: linear-gradient(
+                    45deg,
+                    var(--primary-color) 0%,
+                    transparent 50%
+                );
+                opacity: 0.1;
+                transition: opacity 0.3s;
+                z-index: 1;
+            }
+
+            .project-card:hover::before {
+                opacity: 0.2;
+            }
+
+            .project-card img {
+                width: 100%;
+                height: 200px;
                 object-fit: cover;
-                border-bottom: 3px solid rgba(0, 249, 255, 0.2);
-                transition: filter 0.3s ease;
+                border-bottom: 2px solid var(--primary-color);
+                transition:
+                    border-color 0.5s,
+                    transform 0.3s;
+                z-index: 2;
             }
 
-            .game-card:hover .game-image {
-                filter: brightness(1.1);
+            .project-card:hover img {
+                transform: scale(1.02);
             }
 
-            .game-info {
-                padding: 15px;
-                text-align: center;
+            .project-card h3 {
+                padding: 20px;
+                margin: 0;
+                font-size: 1.5em;
+                color: var(--primary-color);
+                transition: color 0.5s;
+                z-index: 2;
+                position: relative;
             }
 
-            .game-title {
-                font-size: 1rem;
-                margin-bottom: 10px;
-                color: var(--text-light);
-                transition: color 0.3s ease;
-                line-height: 1.4;
-                min-height: 50px;
+            .theme-switcher {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            .theme-button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                background-color: var(--primary-color);
+                color: #fff;
+                font-size: 1.2em;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transition:
+                    transform 0.3s,
+                    background-color 0.5s;
+                position: relative;
+                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
-            .game-card:hover .game-title {
-                color: var(--neon-blue);
+            .theme-button:hover {
+                transform: scale(1.1);
             }
 
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .theme-button::before {
+                content: "🎨";
+                position: absolute;
+                font-size: 1.5em;
+                animation: spin-and-stop 1.5s cubic-bezier(0.2, 0.8, 0.5, 1)
+                    forwards;
             }
 
-            @keyframes cardEntry {
-                from {
-                    opacity: 0;
-                    transform: scale(0.9);
+            @keyframes spin-and-stop {
+                0% {
+                    transform: rotate(0deg);
                 }
-                to {
-                    opacity: 1;
-                    transform: scale(1);
+                80% {
+                    transform: rotate(720deg);
+                }
+                100% {
+                    transform: rotate(720deg);
                 }
             }
 
-            /* Sequential animation delay for cards */
-            .game-card:nth-child(1) {
-                animation-delay: 0.1s;
-            }
-            .game-card:nth-child(2) {
-                animation-delay: 0.2s;
-            }
-            .game-card:nth-child(3) {
-                animation-delay: 0.3s;
-            }
-            .game-card:nth-child(4) {
-                animation-delay: 0.4s;
-            }
-            .game-card:nth-child(5) {
-                animation-delay: 0.5s;
-            }
-            .game-card:nth-child(6) {
-                animation-delay: 0.6s;
+            .aesthetic-glow {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(
+                    circle at 80% 20%,
+                    var(--glow-color) 0%,
+                    transparent 60%
+                );
+                opacity: 0.15;
+                pointer-events: none;
+                animation: glow-move 10s infinite alternate;
+                z-index: -1;
             }
 
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                .header h1 {
-                    font-size: 2rem;
+            @keyframes glow-move {
+                0% {
+                    transform: scale(1) translate(0, 0);
                 }
-
-                .games-container {
-                    grid-template-columns: repeat(
-                        auto-fill,
-                        minmax(220px, 1fr)
-                    );
-                    gap: 20px;
-                }
-
-                .game-title {
-                    font-size: 0.85rem;
+                100% {
+                    transform: scale(1.2) translate(-20%, 20%);
                 }
             }
 
-            @media (max-width: 480px) {
-                .games-container {
-                    grid-template-columns: 1fr;
-                }
+            /* Themes */
+            body.dark-theme {
+                --primary-color: #9c27b0;
+                --secondary-color: #bdbdbd;
+                --background-color: #1a1a2e;
+                --text-color: #e0e0e0;
+                --glow-color: #9c27b0;
+            }
 
-                .header h1 {
-                    font-size: 1.5rem;
-                }
+            body.dark-theme .project-card {
+                background-color: #2a2a44;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            body.soft-theme {
+                --primary-color: #e91e63;
+                --secondary-color: #d3d3d3;
+                --background-color: #2c2c2c;
+                --text-color: #e0e0e0;
+                --glow-color: #e91e63;
+            }
+
+            body.soft-theme .project-card {
+                background-color: #3d3d3d;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             }
         </style>
     </head>
     <body>
-        <div class="header">
-            <h1>GAME COLLECTION</h1>
+        <div class="background-light-container"></div>
+        <div class="aesthetic-glow"></div>
+
+        <div class="theme-switcher">
+            <button class="theme-button" onclick="toggleTheme()"></button>
         </div>
 
-        <div class="games-container">
-            <!-- Game 1 -->
-            <div class="game-card" data-url="./game/2048/index.html">
-                <img
-                    src="./game/img/2048.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">2048</h3>
-                </div>
-            </div>
+        <!-- Proyek 1 -->
+        <div class="container">
+            <a href="./gabut/ai-cerdas/index.html" class="project-card">
+                <img src="./gabut/img/ai-cerdas.png" alt="Gambar Proyek 1" />
+                <h3>ai yang malas</h3>
+            </a>
+
+        <!-- Proyek 2 -->
+            <a href="./gabut/ayam-malu/index.html" class="project-card">
+                <img src="./gabut/img/ayam-malu.png" alt="Gambar Ayam-malu" />
+                <h3>ayam malu</h3>
+            </a>
+
+        <!-- Proyek 3 -->
+            <a href="./gabut/balok-elastis/index.html" class="project-card">
+                <img src="./gabut/img/balok-elastis.png" alt="Gambar Balok elastis" />
+                <h3>balok elastis</h3>
+            </a>
+
+        <!-- Proyek 4 -->
+            <a href="./gabut/burung-siang-dan-malam/index.html" class="project-card">
+                <img src="./gabut/img/burung-siang-dan-malam.png" alt="Gambar Burung pagi dan malam" />
+                <h3>burung siang dan malam</h3>
+            </a>
+
+        <!-- Proyek 5 -->
+            <a href="./gabut/chat-whatsapp/index.html" class="project-card">
+                <img src="./gabut/img/chat-whatsapp.png" alt="Gambar chat whatsapp" />
+                <h3>chat whatsapp</h3>
+            </a>
+
+        <!-- Proyek 6 -->
+            <a href="./gabut/foto-text/index.html" class="project-card">
+                <img src="./gabut/img/foto-text.png" alt="Gambar foto to text" />
+                <h3>photo to text</h3>
+            </a>
+
+        <!-- Proyek 7 -->
+            <a href="./gabut/halloween/index.html" class="project-card">
+                <img src="./gabut/img/halloween.png" alt="Gambar halloween" />
+                <h3>halloween</h3>
+            </a>
+
+        <!-- Proyek 8 -->
+            <a href="./gabut/hujan-kapal-kertas/index.html" class="project-card">
+                <img src="./gabut/img/hujan-kapal-kertas.png" alt="Gambar kapal kertas" />
+                <h3>kapal kertas</h3>
+            </a>
+
+        <!-- Proyek 9 -->
+            <a href="./gabut/ikan-berenang/index.html" class="project-card">
+                <img src="./gabut/img/ikan-berenang.png" alt="Gambar ikan berenang" />
+                <h3>ikan berenang</h3>
+            </a>
+
+        <!-- Proyek 10 -->
+            <a href="./gabut/jam-alarm/index.html" class="project-card">
+                <img src="./gabut/img/jam-alarm.png" alt="Gambar Proyek 10" />
+                <h3>alarm</h3>
+            </a>
             
-            <!-- Game 2 -->
-            <div
-                class="game-card"
-                data-url="./game/alien-invasion/index.html"
-            >
-                <img
-                    src="./game/img/alien-invasion.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">ALIEN INVASION</h3>
-                </div>
-            </div>
-
-            <!-- Game 3 -->
-            <div
-                class="game-card"
-                data-url="./game/batu-kertas-gunting/index.html"
-            >
-                <img
-                    src="./game/img/batu-kertas-gunting.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">BATU KERTAS GUNTING</h3>
-                </div>
-            </div>
-
-            <!-- Game 4 -->
-            <div
-                class="game-card"
-                data-url="./game/brick-breaker-2D/index.html"
-            >
-                <img
-                    src="./game/img/brick-breaker-2D.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">BRICK BREAKER 2D</h3>
-                </div>
-            </div>
-
-            <!-- Game 5 -->
-            <div
-                class="game-card"
-                data-url="./game/bubble-bobble/index.html"
-            >
-                <img
-                    src="./game/img/bubble-bobble.jpg"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">BUBBLE BOBBLE</h3>
-                </div>
-            </div>
-
-            <!-- Game 6 -->
-            <div class="game-card" data-url="./game/bubble-shooter/index.html">
-                <img
-                    src="./game/img/bubble-shooter.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">BUBBLE SHOOTER</h3>
-                </div>
-            </div>
-
-            <!-- Game 7 -->
-            <div class="game-card" data-url="./game/cat-survivors/index.html">
-                <img
-                    src="./game/img/cat-survivors.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CAT SURVIVORS</h3>
-                </div>
-            </div>
-
-            <!-- Game 8 -->
-            <div class="game-card" data-url="./game/catculus/index.html">
-                <img
-                    src="./game/img/catculus.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CATCULUS</h3>
-                </div>
-            </div>
-
-            <!-- Game 9 -->
-            <div class="game-card" data-url="./game/catur/index.html">
-                <img
-                    src="./game/img/catur.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CATUR</h3>
-                </div>
-            </div>
-
-            <!-- Game 10 -->
-            <div class="game-card" data-url="./game/catur-absurd/index.html">
-                <img
-                    src="./game/img/catur-absurd.png"
-                    alt="Catur Absurd"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CATUR ABSURD</h3>
-                </div>
-            </div>
-
-            <!-- Game 11 -->
-            <div class="game-card" data-url="./game/clawstrike/index.html">
-                <img
-                    src="./game/img/clawstrike.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CLAWSTRIKE</h3>
-                </div>
-            </div>
-
-            <!-- Game 12 -->
-            <div class="game-card" data-url="./game/connect-four/index.html">
-                <img
-                    src="./game/img/connect-four.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CONNECT FOUR</h3>
-                </div>
-            </div>
-
-            <!-- Game 13 -->
-            <div class="game-card" data-url="./game/crossy-road/index.html">
-                <img
-                    src="./game/img/crossy-road.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">CROSSY ROAD</h3>
-                </div>
-            </div>
-
-            <!-- Game 14 -->
-            <div class="game-card" data-url="./game/dino-chrome/index.html">
-                <img
-                    src="./game/img/dino-chrome.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">DINOSAURUS CHROME</h3>
-                </div>
-            </div>
-
-            <!-- Game 15 -->
-            <div class="game-card" data-url="./game/dino-memory/index.html">
-                <img
-                    src="./game/img/dino-memory.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">DINOSAURUS MEMORY</h3>
-                </div>
-            </div>
-
-            <!-- Game 16 -->
-            <div class="game-card" data-url="./game/duck-hunt/index.html">
-                <img
-                    src="./game/img/duck-hunt.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">DUCK HUNT</h3>
-                </div>
-            </div>
-
-            <!-- Game 17 -->
-            <div class="game-card" data-url="./game/flappy-bird/index.html">
-                <img
-                    src="./game/img/flappy-bird.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">FLAPPY BIRD</h3>
-                </div>
-            </div>
-
-            <!-- Game 18 -->
-            <div class="game-card" data-url="./game/flappy-jump/index.html">
-                <img
-                    src="./game/img/flappy-jump.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">FLAPPY JUMP</h3>
-                </div>
-            </div>
-
-            <!-- Game 19 -->
-            <div class="game-card" data-url="./game/fruit-ninja/index.html">
-                <img
-                    src="./game/img/fruit-ninja.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">FRUIT NINJA</h3>
-                </div>
-            </div>
+            <!-- Proyek 11 -->
+            <a href="./gabut/kalkulator/index.html" class="project-card">
+                <img src="./gabut/img/kalkulator.png" alt="Gambar kalkulator" />
+                <h3>kalkulator</h3>
+            </a>
             
-            <!-- Game 20 -->
-            <div class="game-card" data-url="./game/hextris/index.html">
-                <img
-                    src="./game/img/hextris.jpg"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">HEXTRIS</h3>
-                </div>
-            </div>
-
-            <!-- Game 21 -->
-            <div
-                class="game-card"
-                data-url="./game/kelinci-pemberani/index.html"
-            >
-                <img
-                    src="./game/img/kelinci-pemberani.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">KELINCI PEMBERANI</h3>
-                </div>
-            </div>
-
-            <!-- Game 22 -->
-            <div class="game-card" data-url="./game/kucing-bersatu/index.html">
-                <img
-                    src="./game/img/kucing-bersatu.png"
-                    alt="Catur Absurd"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">KUCING BERSATU</h3>
-                </div>
-            </div>
-
-            <!-- Game 23 -->
-            <div class="game-card" data-url="./game/labirin/index.html">
-                <img
-                    src="./game/img/labirin.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">LABIRIN</h3>
-                </div>
-            </div>
-
-            <!-- Game 24 -->
-            <div class="game-card" data-url="./game/labirin-miring/index.html">
-                <img
-                    src="./game/img/labirin-miring.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">LABIRIN MIRING</h3>
-                </div>
-            </div>
-
-            <!-- Game 25 -->
-            <div class="game-card" data-url="./game/ludo/index.html">
-                <img
-                    src="./game/img/ludo.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">LUDO</h3>
-                </div>
-            </div>
-
-            <!-- Game 26 -->
-            <div class="game-card" data-url="./game/mad-shark/index.html">
-                <img
-                    src="./game/img/mad-shark.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">MAD SHARK</h3>
-                </div>
-            </div>
+            <!-- Proyek 12 -->
+            <a href="./gabut/kapur/index.html" class="project-card">
+                <img src="./gabut/img/kapur.png" alt="Gambar kapur" />
+                <h3>kapur</h3>
+            </a>
             
-            <!-- Game 27 -->
-            <div class="game-card" data-url="./game/membangun-gedung/index.html">
-                <img
-                    src="./game/img/membangun-gedung.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">Membangun Gedung</h3>
-                </div>
-            </div>
-
-            <!-- Game 28 -->
-            <div class="game-card" data-url="./game/memori-kartu/index.html">
-                <img
-                    src="./game/img/memori-kartu.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">MEMORI KARTU</h3>
-                </div>
-            </div>
-
-            <!-- Game 29 -->
-            <div class="game-card" data-url="./game/ninja-run/index.html">
-                <img
-                    src="./game/img/ninja-run.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">NINJA RUN</h3>
-                </div>
-            </div>
-
-            <!-- Game 30 -->
-            <div class="game-card" data-url="./game/panah/index.html">
-                <img
-                    src="./game/img/panah.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">PANAH</h3>
-                </div>
-            </div>
-
-            <!-- Game 31 -->
-            <div
-                class="game-card"
-                data-url="./game/permainan-matematika/index.html"
-            >
-                <img
-                    src="./game/img/permainan-matematika.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">PERMAINAN MATEMATIKA</h3>
-                </div>
-            </div>
-
-            <!-- Game 32 -->
-            <div class="game-card" data-url="./game/pesawat-terbang/index.html">
-                <img
-                    src="./game/img/pesawat-terbang.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">PESAWAT TERBANG</h3>
-                </div>
-            </div>
-
-            <!-- Game 33 -->
-            <div class="game-card" data-url="./game/pukul-tikus/index.html">
-                <img
-                    src="./game/img/pukul-tikus.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">PUKUL TIKUS</h3>
-                </div>
-            </div>
+            <!-- Proyek 13 -->
+            <a href="./gabut/kelinci-berseluncur/index.html" class="project-card">
+                <img src="./gabut/img/kelinci-berseluncur.png" alt="Gambar kelinci berseluncur" />
+                <h3>kelinci seluncur</h3>
+            </a>
             
-            <!-- Game 34 -->
-            <div class="game-card" data-url="./game/tebak-warna/index.html">
-                <img
-                    src="./game/img/tebak-warna.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TEBAK WARNA</h3>
-                </div>
-            </div>
-
-            <!-- Game 35 -->
-            <div class="game-card" data-url="./game/tembak-asteroid/index.html">
-                <img
-                    src="./game/img/tembak-asteroid.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TEMBAK ASTEROID</h3>
-                </div>
-            </div>
-
-            <!-- Game 36 -->
-            <div class="game-card" data-url="./game/tembak-target/index.html">
-                <img
-                    src="./game/img/tembak-target.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TEMBAK TARGET</h3>
-                </div>
-            </div>
-
-           <!-- Game 37 -->
-            <div
-                class="game-card"
-                data-url="./game/tenis/index.html">
-                <img
-                    src="./game/img/tenis.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TENIS</h3>
-                </div>
-            </div>
-
-            <!-- Game 38 -->
-            <div
-                class="game-card"
-                data-url="./game/tembak-ayam/index.html">
-                <img
-                    src="./game/img/tembak-ayam.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TEMBAK AYAM URL</h3>
-                </div>
-            </div>
-
-            <!-- Game 39 -->
-            <div class="game-card" data-url="./game/tic-tac-toe/index.html">
-                <img
-                    src="./game/img/tic-tac-toe.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TIC TAC TOE</h3>
-                </div>
-            </div>
-
-            <!-- Game 40 -->
-            <div class="game-card" data-url="./game/tower-blok/index.html">
-                <img
-                    src="./game/img/tower-blok.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">TOWER BLOK</h3>
-                </div>
-            </div>
-
-            <!-- Game 41 -->
-            <div class="game-card" data-url="./game/ular-matematika/index.html">
-                <img
-                    src="./game/img/ular-matematika.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">ULAR MATEMATIKA</h3>
-                </div>
-            </div>
-
-            <!-- Game 42 -->
-            <div class="game-card" data-url="./game/ular1/index.html">
-                <img
-                    src="./game/img/ular1.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">ULAR</h3>
-                </div>
-            </div>
-
-            <!-- Game 43 -->
-            <div class="game-card" data-url="./game/ular2/index.html">
-                <img
-                    src="./game/img/ular2.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">ULAR TANTANGAN</h3>
-                </div>
-            </div>
-
-            <!-- Game 44 -->
-            <div
-                class="game-card"
-                data-url="./game/ular-url/index.html">
-                <img
-                    src="./game/img/ular-url.png"
-                    alt="Gambar Game"
-                    class="game-image"
-                />
-                <div class="game-info">
-                    <h3 class="game-title">ULAR URL</h3>
-                </div>
-            </div>
+            <!-- Proyek 14 -->
+            <a href="./gabut/kelinci-terbang/index.html" class="project-card">
+                <img src="./gabut/img/kelinci-terbang.png" alt="Gambar kelinci terbang" />
+                <h3>kelinci terbang</h3>
+            </a>
+            
+            <!-- Proyek 15 -->
+            <a href="./gabut/kucing-bermain/index.html" class="project-card">
+                <img src="./gabut/img/kucing-bermain.png" alt="Gambar kucing bermain" />
+                <h3>kucing bermain</h3>
+            </a>
+            
+            <!-- Proyek 16 -->
+            <a href="./gabut/kucing-pengawas/index.html" class="project-card">
+                <img src="./gabut/img/kucing-pengawas.png" alt="Gambar kucing pengawas" />
+                <h3>kucing pengawas</h3>
+            </a>
+            
+            <!-- Proyek 17 -->
+            <a href="./gabut/lampu/index.html" class="project-card">
+                <img src="./gabut/img/lampu.png" alt="Gambar lampu" />
+                <h3>lampu sakelar</h3>
+            </a>
+            
+            <!-- Proyek 18 -->
+            <a href="./gabut/membuat-pohon/index.html" class="project-card">
+                <img src="./gabut/img/membuat-pohon.png" alt="Gambar membuat pohon" />
+                <h3>membuat pohon</h3>
+            </a>
+            
+            <!-- Proyek 19 -->
+            <a href="./gabut/naga-bersin/index.html" class="project-card">
+                <img src="./gabut/img/naga-bersin.png" alt="Gambar naga bersin" />
+                <h3>naga bersin</h3>
+            </a>
+            
+            <!-- Proyek 20 -->
+            <a href="./gabut/pembuat-text/index.html" class="project-card">
+                <img src="./gabut/img/pembuat-text.png" alt="Gambar pembuat text" />
+                <h3>pembuat text</h3>
+            </a>
+            
+            <!-- Proyek 21 -->
+            <a href="./gabut/piano/index.html" class="project-card">
+                <img src="./gabut/img/piano.png" alt="Gambar piano" />
+                <h3>piano</h3>
+            </a>
+            
+            <!-- Proyek 22 -->
+            <a href="./gabut/portal-infiniti/index.html" class="project-card">
+                <img src="./gabut/img/portal-infiniti.png" alt="Gambar portal infinity" />
+                <h3>portal infinity</h3>
+            </a>
+            
+            <!-- Proyek 23 -->
+            <a href="./gabut/presentase-baterai/index.html" class="project-card">
+                <img src="./gabut/img/presentase-baterai.png" alt="Gambar baterai" />
+                <h3>presentase baterai</h3>
+            </a>
+            
+            <!-- Proyek 24 -->
+            <a href="./gabut/replika-komputer/index.html" class="project-card">
+                <img src="./gabut/img/replika-komputer.png" alt="Gambar replika komputer" />
+                <h3>replika komputer</h3>
+            </a>
+            
+            <!-- Proyek 25 -->
+            <a href="./gabut/shader-api-3D/index.html" class="project-card">
+                <img src="./gabut/img/shader-api-3D.png" alt="Gambar shader api" />
+                <h3>shader api 3D</h3>
+            </a>
+            
+            <!-- Proyek 26 -->
+            <a href="./gabut/singa-kepanasan/index.html" class="project-card">
+                <img src="./gabut/img/singa-kepanasan.png" alt="Gambar singa" />
+                <h3>singa kepanasan</h3>
+            </a>
+            
+            <!-- Proyek 27 -->
+            <a href="./gabut/spinner-carnaval/index.html" class="project-card">
+                <img src="./gabut/img/spinner-carnaval.png" alt="Gambar spinner carnaval" />
+                <h3>spinner carnaval</h3>
+            </a>
+            
+            <!-- Proyek 28 -->
+            <a href="./gabut/video-text/index.html" class="project-card">
+                <img src="./gabut/img/video-text.png" alt="Gambar video to text" />
+                <h3>video to text</h3>
+            </a>
         </div>
-
-        <div class="falling-line" id="fallingLines"></div>
 
         <script>
-            // Smooth click handler with delay before opening link
-            document.querySelectorAll(".game-card").forEach(card => {
-                card.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const url = this.getAttribute("data-url");
-                    this.style.animation = "gameClickAnimation 0.6s forwards";
-                    setTimeout(() => {
-                        window.open(url, "_blank");
-                        setTimeout(() => {
-                            this.style.animation = "";
-                        }, 1000);
-                    }, 500);
-                });
-            });
+            const themes = ["default", "dark", "soft"];
+            let currentThemeIndex = 0;
+            let isSpinning = false;
 
-            // Create falling lines
-            const fallingLines = document.getElementById("fallingLines");
-            function createLines() {
-                const lines = Math.floor(window.innerWidth / 30);
-                for (let i = 0; i < lines; i++) {
-                    const line = document.createElement("div");
-                    line.className = "line";
-                    line.style.left = Math.random() * window.innerWidth + "px";
-                    line.style.animationDuration = 5 + Math.random() * 10 + "s";
-                    line.style.animationDelay = Math.random() * 5 + "s";
-                    line.style.opacity = Math.random() * 0.5;
-                    fallingLines.appendChild(line);
+            function toggleTheme() {
+                if (isSpinning) return;
+
+                isSpinning = true;
+                const themeButton = document.querySelector(".theme-button");
+
+                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+                const themeName = themes[currentThemeIndex];
+                document.body.className = "";
+                if (themeName !== "default") {
+                    document.body.classList.add(themeName + "-theme");
                 }
+
+                themeButton.style.animation = "none";
+                themeButton.offsetHeight;
+                themeButton.style.animation =
+                    "spin-and-stop 1.5s cubic-bezier(0.2, 0.8, 0.5, 1) forwards";
+
+                setTimeout(() => {
+                    isSpinning = false;
+                }, 1500);
             }
-            createLines();
+
+            const backgroundLightContainer = document.querySelector(
+                ".background-light-container"
+            );
+            for (let i = 0; i < 30; i++) {
+                const lightStreak = document.createElement("div");
+                lightStreak.className = "light-streak";
+
+                const startX = Math.random() * 120 - 20;
+                const startY = Math.random() * 120 - 20;
+
+                lightStreak.style.setProperty("--x", `${startX}vw`);
+                lightStreak.style.setProperty("--y", `${startY}vh`);
+                lightStreak.style.animationDelay = `${Math.random() * 5}s`;
+                lightStreak.style.animationDuration = `${
+                    Math.random() * 5 + 3
+                }s`;
+
+                backgroundLightContainer.appendChild(lightStreak);
+            }
         </script>
     </body>
 </html>
